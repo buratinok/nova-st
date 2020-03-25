@@ -1,0 +1,45 @@
+<section class="section-header bg-gradient py-5">
+
+        <!-- Swiper -->
+        <div class="swiper-home swiper-container">
+            <div class="swiper-wrapper">
+                {{#repeat 3}}
+                <div class="swiper-slide">
+                    <div class="container-fluid px-5">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <h1 class="display-3 font-weight-bold pr-5">Тротуарная плитка от производителя</h1>
+                            <h5 class="mt-5">Производим тротуарную плитку с 1998 г.</h5>
+                            <div class="row row-cols-2">
+                                {{#each tsconfig.home-header}}
+                                <div class="col mt-4">
+                                    <div class="media align-items-center">
+                                        <i class="{{icon}}"></i>
+                                        <div class="media-body ml-2">
+                                            {{title}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="col">
+                            {{>carousel-header}}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                {{/repeat}}
+            </div>
+
+        </div>
+
+
+        <!-- Add Arrows -->
+        <div class="control-swiper position-absolute d-flex center-bot mt-4">
+            <div class="control-swiper__prev control-swiper_center position-relative"></div>
+            <div class="px-5"></div>
+            <div class="control-swiper__next control-swiper_center position-relative"></div>
+        </div>
+
+</section>

@@ -1,0 +1,29 @@
+
+
+home-header:
+  -
+    icon: snowflake
+    title: Морозостойкость F200 Срок службы до 50 лет
+  -
+    icon: drops
+    title: Водопоглащение у нашего оматериала 4,2 %
+  -
+    icon: cube
+    title: Устойчивость к истиранию качество выше ГОСТ 13015
+  -
+    icon: vector
+    title: Геометрия предел допуска ±1 мм
+
+advantages:
+  -
+    img: cara
+    title: 2 000 м3
+    description: Материала отгружается ежедневно
+  -
+    img: plant
+    title: 9 500 м2
+    description: Занимает производственный комплекс
+  -
+    img: map
+    title: 18 км от МКАД
+    description: Волоколамское шоссе

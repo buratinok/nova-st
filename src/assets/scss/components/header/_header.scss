@@ -1,0 +1,114 @@
+
+.header {
+  .navbar-top {
+    .navbar-brand {
+      h1 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: rem-calc(100px);
+        height: rem-calc(41px);
+      }
+    }
+
+    &__title {
+      @include fonts(16, 18)
+    }
+
+    .media {
+      &-body {
+        &__address {
+          h6 {
+            @include fonts(12, 15)
+          }
+
+          p {
+            @include fonts(12, 15)
+          }
+        }
+
+        &__contact {
+          h5 {
+            @include fonts(16, 19)
+          }
+
+          a {
+            @include fonts(14, 16)
+          }
+        }
+      }
+    }
+
+    .btn {
+      &-call {
+        @include fonts(14, 16);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .navbar-bottom {
+    .nav {
+      .nav-link {
+        color: #000;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+
+      .nav-item {
+        .dropdown-menu {
+          border-radius: 0;
+        }
+      }
+
+      .show {
+        .nav-link {
+          color: #fff;
+
+          &::after {
+            transform: rotate(180deg);
+            transition: transform .5s;
+          }
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      &::after {
+        border: none;
+        vertical-align: 0;
+      }
+    }
+    .nav-pills .nav-link {
+      border-radius: 0;
+    }
+
+    .btn-group {
+      > .btn {
+        border-radius: 0;
+      }
+
+      &__cart {
+        &:hover .cart {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}

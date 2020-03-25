@@ -1,0 +1,46 @@
+@import "~hover.css/scss/effects/shadow-and-glow-transitions/float-shadow";
+@import "~hover.css/scss/effects/2d-transitions/shrink";
+@import "~hover.css/scss/effects/2d-transitions/sink";
+@import "~hover.css/scss/effects/2d-transitions/float";
+
+.section-advantages {
+  .col-advantages {
+    .card {
+      @include shrink();
+
+      .card-body__img {
+        min-height: rem-calc(160px);
+
+        &::after {
+          content: '';
+          background: url('../img/card/advanteges/shadow.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          position: absolute;
+          width: 60%;
+          height: 60%;
+          top: 55%;
+          left: 50%;
+          z-index: 0;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:hover {
+        .card-body__img {
+          transform: translateY(6%);
+          transition: all .5s;
+          transition-timing-function: ease-out;
+
+          &::after {
+            width: 100%;
+            height: 100%;
+            transition: all .2s;
+            transition-timing-function: ease-out;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+
+//база
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Rubik:300&display=swap&subset=cyrillic');
+
+//bootstrap
+$light: #f9f9f9;
+$secondary: #ebebeb;
+$gray-600: #8C8C8C;
+$yellow: #FDD572;
+$red: #E97A5A;
+$red2: #B61320;
+$blue: #334292;
+$green: #39AE2D;
+
+$enable-rounded: true;
+$enable-responsive-font-sizes: true;
+$border-radius: 30px;
+
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-source-rpo: 'Source Sans Pro', sans-serif;
+//slick
+$slick-loader-path: '../../assets/img/';
+
+//light gallery
+$backdrop-opacity: .5;
+
+
+//формирование базы шрифта
+$size: 16px;
+$line_height:18px;
+$family: $font-family-sans-serif;
+$weight:400;
+$va:18;

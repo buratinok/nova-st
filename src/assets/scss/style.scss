@@ -1,0 +1,23 @@
+// style.scss
+// Option B: Include parts of Bootstrap
+
+@charset "utf-8";
+
+@import "settings";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/mixins/grid-framework";
+@import "~bootstrap/scss/mixins/grid";
+@import "~hover.css/scss/options";
+@import "~hover.css/scss/mixins";
+@import "~hover.css/scss/hacks";
+@import "~bourbon/core/bourbon.scss";
+@import "functions/functions";
+@import "mixin/mixin";
+@import "global";
+
+@import "components/header/header";
+@import "components/section-header";
+@import "components/section-catalog";
+@import "components/section-advantages";
