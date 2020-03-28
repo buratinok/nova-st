@@ -1,0 +1,37 @@
+.section-delivery {
+	.card {
+		position: relative;
+		border: none;
+		&-text {
+			@include fonts(20, 23);
+		}
+	}
+
+	.alert {
+		background: #E97A5A;
+		border-radius: 10px;
+		@include fonts(16, 16);
+	}
+
+	.can-get {
+		&__text {
+
+			&:before {
+			content: "";
+		    position: absolute;
+		    width: 3rem;
+		    height: 1px;
+		    opacity: .25;
+		    background-color: #000;
+		    top: 40%;
+		    transform: translate(50%, -50%);
+		    right: 100%;
+			}
+		}
+
+	}
+
+	.pre-pay {
+		@include fonts(12, 14);
+	}
+}
