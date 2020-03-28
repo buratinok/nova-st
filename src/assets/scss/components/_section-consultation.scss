@@ -1,0 +1,55 @@
+
+.section-consultation {
+  background: url("../img/consultation.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: radial-gradient(125.31% 125.31% at 46.02% 7.9%, #EFD595 0%, #A4946E 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    z-index: 0;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background: radial-gradient(125.31% 125.31% at 46.02% 7.9%, #EFD595 0%, #A4946E 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    z-index: 1;
+  }
+
+  .card{
+    &-img-overlay{
+      width: 420px;
+    }
+  }
+
+  .card-body{
+    &__description{
+      font-weight: lighter;
+    }
+  }
+
+  &__form{
+    p{
+      @include fonts(12, 14)
+    }
+    .form-group{
+      i{
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

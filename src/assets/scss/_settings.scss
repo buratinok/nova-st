@@ -3,11 +3,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Rubik:300&display=swap&subset=cyrillic');
 
+
 //bootstrap
 $light: #f9f9f9;
 $secondary: #ebebeb;
 $gray-600: #8C8C8C;
 $yellow: #FDD572;
+$orang: #E1D29C;
 $red: #E97A5A;
 $red2: #B61320;
 $blue: #334292;
@@ -32,3 +34,7 @@ $line_height:18px;
 $family: $font-family-sans-serif;
 $weight:400;
 $va:18;
+
+:root {
+  --swiper-theme-color: #E97A5A;
+}

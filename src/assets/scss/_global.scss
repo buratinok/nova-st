@@ -2,6 +2,9 @@
 .border-r0{
   border-radius: 0;
 }
+.border-r50{
+  border-radius: 50%;
+}
 
 .center-block{
   top: 50%;
@@ -13,9 +16,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.rotate-180{
+  transform: rotate(180deg);
+}
+
+.bottom-block{
+  bottom: 0;
+  left: 0;
+}
+
 .z-0{
   z-index: 0;
 }
 .z-1{
   z-index: 1000;
+}
+.z-2{
+  z-index: 1020;
+}
+
+.fonts-size-14{
+  @include fonts(14, 16)
 }

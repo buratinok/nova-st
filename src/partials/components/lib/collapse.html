@@ -1,0 +1,23 @@
+<div class="accordion mt-5" id="accordionExample">
+    {{#each tsconfig.card-faq}}
+    <div class="card mt-2 border-r0">
+        <div class="card-header border-0 bg-white position-relative px-1 px-md-4" id="{{id}}">
+
+            <button class="btn btn-link btn-accordion text-dark text-decoration-none {{collapsed}} px-2" data-js='false' type="button"
+                    data-toggle="collapse"
+                    data-target="#{{target}}"
+                    aria-expanded="{{true}}"
+                    aria-controls="{{controls}}">
+                <i class="arrow-bottom"></i>
+                 {{name}}
+            </button>
+        </div>
+
+        <div id="{{target}}" class="collapse {{show}}" aria-labelledby="{{id}}" data-parent="#accordionExample">
+            <div class="card-body">
+                {{title}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

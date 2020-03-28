@@ -27,3 +27,99 @@ advantages:
     img: map
     title: 18 км от МКАД
     description: Волоколамское шоссе
+
+sota:
+  -
+    description: Блоки
+    img: sota-yellow
+    class: "position-absolute z-0"
+    col: 5
+  -
+    title: Тротуарная плитка
+    description: от 490 Р / шт
+    class: "z-1"
+    img: sota-red
+    col: 7
+  -
+    description: Бордюры
+    img: sota-grey
+    class: "position-absolute z-0"
+    col: 5
+
+questions:
+  -
+    item: Тротуарная плитка
+    true: true
+    tab: paving-slabs
+    active: active
+    show: show
+  -
+    item: Облицовочная плитка
+    true: false
+    tab: facing-tile
+  -
+    item: Бордюры
+    true: false
+    tab: borders
+  -
+    item: Блоки
+    true: false
+    tab: blocks
+
+
+card-faq:
+  -
+    name: Что если плитка треснет через 2 недели после монтажа?
+    id: heading1
+    true: false
+    target: collapse1
+    controls: collapse1
+    title: "- на эту работу девушки сами покупают билеты и оформляют визу. рданию и Италию."
+  -
+    name: Я могу заказать у вас монтаж после покупки?
+    collapsed:  collapsed
+    id: heading2
+    target: collapse2
+    true: false
+    controls: collapse2
+    title: "- однозначного ответа на этот вопрос нет. Даже в одном и том же клубе у девушек разный заработок."
+  -
+    name: Какую гарантию предоставляете на продукцию
+    collapsed:  collapsed
+    id: headingTree
+    target: collapse3
+    true: false
+    controls: collapse3
+    title: "- Да, безалкогольная консумация возможна в Италии и Испании."
+  -
+    name:  Как происходит обмен, возврат товара?
+    collapsed:  collapsed
+    id: heading4
+    target: collapse4
+    true: false
+    controls: collapse4
+    title: "- страх это нормально, если в меру. Все волнуются в первый раз, и даже во второй)) пробовали."
+  -
+    name: Как осуществляете доставку в регионы и опт
+    collapsed:  collapsed
+    id: heading5
+    target: collapse5
+    true: false
+    controls: collapse5
+    title: "- В тех странах, где рабочую визу оформить нельзя, контракты подписывать не имеет смысла. "
+  -
+    name:   А точно работа без интима?
+    collapsed:  collapsed
+    id: heading6
+    target: collapse6
+    true: false
+    controls: collapse6
+    title: "- Точно! Никто девушек не заставляет встречаться с гостями вне клуба! За интим в клубе сразу же увольняют."
+  -
+    name: Сколько стоит вызвать вашего специалиста на участок?
+    collapsed:  collapsed
+    id: heading7
+    target: collapse7
+    true: false
+    controls: collapse7
+    title: "Уехать вы можете в любое время, но зарплата в таком случае будет не выплачена."
