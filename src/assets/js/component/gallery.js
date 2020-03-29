@@ -2,7 +2,11 @@
 
 
 const $increaseImages = function() {
-    console.log("hello");
+    lightGallery(document.getElementById('animated-thumbnials'), {
+        thumbnail:true,
+        animateThumb: false,
+        showThumbByDefault: false
+    });
 }
 
 export default $increaseImages;

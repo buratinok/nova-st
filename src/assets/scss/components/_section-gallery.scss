@@ -34,4 +34,14 @@
     .pagination-gallery a{
         border: none;
     }
+    .btn {
+      &:hover {
+        .arrow {
+          svg {
+            pointer-events: fill;
+            fill: white;
+          }
+        }
+      }
+    }
 }
