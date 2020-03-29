@@ -1,4 +1,4 @@
-.section-questions{
+.section-gallery{
 
     .nav{
       &-link{
@@ -23,5 +23,15 @@
       &:hover{
         color: white;
       }
+    }
+    img {
+        width: 100%;
+    }
+
+    .pagination-gallery {
+        margin-top: 60px;
+    }
+    .pagination-gallery a{
+        border: none;
     }
 }
