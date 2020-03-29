@@ -1,0 +1,8 @@
+<ul class="nav flex-column">
+    {{#each tsconfig.menu}}
+    <li class="nav-item {{active}}">
+        <a class="nav-link text-white" href="./{{link}}.html">{{name}} <span
+                class="sr-only">(current)</span></a>
+    </li>
+    {{/each}}
+</ul>

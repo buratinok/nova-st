@@ -143,3 +143,24 @@ gallery:
     item: Еще раздел
     true: false
     tab: blocks
+
+menu:
+  -
+    name: Каталог
+    link: index
+    active: active
+  -
+    name: Галерея
+    link: gallery
+  -
+    name: О компании
+    link: company
+  -
+    name: Наше качество
+    link: quality
+  -
+    name: Доставка
+    link: delivery
+  -
+    name: Контакты
+    link: contact

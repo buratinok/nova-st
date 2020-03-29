@@ -19,4 +19,37 @@
       }
     }
   }
+  .media {
+    &-body {
+      &__address {
+        h6 {
+          @include fonts(12, 15)
+        }
+
+        p {
+          @include fonts(12, 15)
+        }
+      }
+
+      &__contact {
+        h5 {
+          @include fonts(16, 19)
+        }
+
+        a {
+          @include fonts(14, 16)
+        }
+      }
+    }
+  }
+
+  .btn {
+    &-call {
+      @include fonts(14, 16);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
