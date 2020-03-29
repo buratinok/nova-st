@@ -141,7 +141,7 @@ const $iconSvg = function () {
         $('.user-icon').html($user);
         $('.phone-icon').html($phone);
         $('.email-icon').html($email);
-        $('.email-icon2').html($emailIcon);
+        $('.email2-icon').html($emailIcon);
         $('.offer-icon').html($offer);
         $('.money-icon').html($money);
         $('.package-icon').html($package);
