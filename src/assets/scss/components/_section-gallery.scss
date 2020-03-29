@@ -29,6 +29,10 @@
     }
     .pagination-gallery a{
         border: none;
+        &:hover {
+          color: red;
+          background: none;
+        }
     }
     .btn {
       &:hover {
