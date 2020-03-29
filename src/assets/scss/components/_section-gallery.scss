@@ -20,26 +20,44 @@
       }
     }
 
-    img {
-        width: 100%;
+    .image {
+      width: 380px;
+      height: 242px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      &:hover img {
+        width: 380px;
+      }
+  
+    }
+    
+    .image img {
+      width: 420px;
+      height: auto;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
     }
 
     .pagination-gallery {
         margin-top: 60px;
     }
+
     .pagination-gallery a{
         border: none;
         &:hover {
-          color: red;
+          color: $red2;
           background: none;
         }
     }
+
     .btn {
       &:hover {
         .arrow {
           svg {
             pointer-events: fill;
-            fill: white;
+            fill: $light;
           }
         }
       }
