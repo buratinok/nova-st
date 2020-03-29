@@ -1,7 +1,5 @@
 .section-delivery {
 	.card {
-		position: relative;
-		border: none;
 		&-text {
 			@include fonts(20, 23);
 		}
