@@ -2,11 +2,10 @@
 
 
 const $increaseImages = function() {
-    lightGallery(document.getElementById('animated-thumbnials'), {
-        thumbnail:true,
-        animateThumb: false,
-        showThumbByDefault: false
-    });
+
+        $("#lightgallery").lightGallery({
+            selector: '.item'
+        }); 
 }
 
 export default $increaseImages;
