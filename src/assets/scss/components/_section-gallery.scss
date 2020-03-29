@@ -25,7 +25,6 @@
       height: 242px;
       margin: 0;
       padding: 0;
-      background: #fff;
       overflow: hidden;
 
       &:hover img {
@@ -48,7 +47,7 @@
     .pagination-gallery a{
         border: none;
         &:hover {
-          color: red;
+          color: $red2;
           background: none;
         }
     }
@@ -58,7 +57,7 @@
         .arrow {
           svg {
             pointer-events: fill;
-            fill: white;
+            fill: $light;
           }
         }
       }
