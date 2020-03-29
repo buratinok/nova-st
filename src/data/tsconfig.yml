@@ -123,3 +123,23 @@ card-faq:
     true: false
     controls: collapse7
     title: "Уехать вы можете в любое время, но зарплата в таком случае будет не выплачена."
+
+gallery:
+  -
+    item: Смотреть все
+    true: true
+    tab: paving-slabs
+    active: active
+    show: show
+  -
+    item: Раздел
+    true: false
+    tab: facing-tile
+  -
+    item: Наши работы
+    true: false
+    tab: borders
+  -
+    item: Еще раздел
+    true: false
+    tab: blocks
