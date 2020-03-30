@@ -32,3 +32,30 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .section-price {
+    background-position-y: 0%;
+
+    .card{
+      &-body{
+        &__description{
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .section-price {
+    background-position-x: rem-calc(-300px);
+
+  }
+}
+@include media-breakpoint-up(md) {
+  .section-price {
+    background-position: -20%;
+
+  }
+}

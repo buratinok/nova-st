@@ -1,5 +1,6 @@
 @import "~hover.css/scss/effects/2d-transitions/grow";
 
+
 .section-catalog {
   .card {
     @include grow();
@@ -48,6 +49,39 @@
         width: 0;
         height: 0;
       }
+    }
+  }
+}
+
+/*@include media-breakpoint-up(sm) {
+  .section-catalog {
+    .card-sm {
+      padding: rem-calc(36.5px);
+
+      .card-img-overlay {
+        padding: 1.25rem 0;
+      }
+    }
+  }
+}*/
+
+@include media-breakpoint-down(md) {
+  .section-catalog {
+    .card{
+      &-sm{
+        padding: rem-calc(46.5px);
+      }
+      &-title{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section-catalog {
+    .card-sm {
+      padding: rem-calc(76px)
     }
   }
 }

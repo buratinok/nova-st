@@ -1,14 +1,14 @@
 <section class="section-advantages">
-    <div class="container">
-        <h2 class="text-left font-weight-bold pb-5">Наши преимущества</h2>
-        <div class="row row-cols-3">
+    <div class="container-md">
+        <h2 class="text-md-left text-center font-weight-bold pb-5">Наши преимущества</h2>
+        <div class="row row-cols-md-3 justify-content-around align-items-center">
             {{#each tsconfig.advantages}}
-            <div class="col col-advantages">
+            <div class="col col-advantages py-5">
                 <div class="card position-relative border-0 pt-5">
                     <div class="card-body__img">
-                        <img class="position-relative center-block z-1" src="assets/img/card/advanteges/{{img}}.png" alt="{{description}}"/>
+                        <img class="img-fluid position-relative center-block z-1" src="assets/img/card/advanteges/{{img}}.png" alt="{{description}}"/>
                     </div>
-                    <div class="card-body text-center pb-0 px-md-5">
+                    <div class="card-body text-center pb-0 px-5">
                         <h2 class="mt-0">{{title}}</h2>
                         <a href="#" class="stretched-link text-decoration-none text-dark text-lowercase">
                             {{description}}

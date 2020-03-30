@@ -16,6 +16,7 @@
     opacity: .3;
     z-index: 0;
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -28,28 +29,45 @@
     z-index: 1;
   }
 
-  .card{
-    &-img-overlay{
+  .card {
+    &-img-overlay {
       width: 420px;
     }
   }
 
-  .card-body{
-    &__description{
+  .card-body {
+    &__description {
       font-weight: lighter;
     }
   }
 
-  &__form{
-    p{
+  &__form {
+    p {
       @include fonts(12, 14)
     }
-    .form-group{
-      i{
+
+    .form-group {
+      i {
         top: 50%;
         right: 5%;
         transform: translate(-50%, -50%);
       }
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .section-consultation {
+
+
+    .card {
+      &-img-overlay {
+        width: 260px;
+      }
+      h5{
+        font-size: 1rem;
+      }
+    }
+
   }
 }

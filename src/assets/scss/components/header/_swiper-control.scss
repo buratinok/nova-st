@@ -20,7 +20,29 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(sm) {
+  .control-swiper {
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+
+    &__next {
+      transform: rotate(180deg);
+    }
+
+    .btn {
+      &:hover {
+        .arrow {
+          svg {
+            pointer-events: fill;
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
   .control-swiper {
     top: 80%;
     left: 80%;

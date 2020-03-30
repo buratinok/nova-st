@@ -35,3 +35,12 @@
 }
 
 @import "header/video-gallery";
+
+@include media-breakpoint-down(sm) {
+  .section-video{
+    &__description{
+      top: rem-calc(80px);
+      left: 10%;
+    }
+  }
+}

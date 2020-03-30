@@ -1,11 +1,11 @@
-<section class="section-catalog p-5">
-    <div class="container-fluid">
+<section class="section-catalog py-5">
+    <div class="container-md">
         <h2 class="text-left font-weight-bold">Каталог</h2>
-        <div class="row row-cols-5">
+        <div class="row row-cols-2 row-cols-sm-5 no-gutters">
             {{#repeat 9}}
-            <div class="col mt-4">
+            <div class="col p-1 mt-md-4">
                 <div class="card bg-white text-white border-r0">
-                    <img src="assets/img/сatalog/catalog.png"/>
+                    <img class="img-fluid" src="assets/img/сatalog/catalog.png"/>
                     <div class="card-img-overlay">
                         <a href="#" class="stretched-link text-dark text-decoration-none">
                             <h5 class="card-title text-center">Тротуарная плитка</h5>
@@ -14,8 +14,8 @@
                 </div>
             </div>
             {{/repeat}}
-            <div class="col mt-4">
-                <div class="card card-catalog bg-white text-white border-r0 " style="padding: 76px">
+            <div class="col p-1 mt-md-4">
+                <div class="card card-catalog card-sm bg-white text-white border-r0 ">
                     <i class="card-menu"></i>
                     <!--<img src="assets/img/сatalog/menu-card.png" height="44" width="44"/>-->
                     <div class="card-img-overlay">

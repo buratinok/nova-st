@@ -25,3 +25,16 @@
       }
     }
 }
+
+@include media-breakpoint-down(sm) {
+  .section-questions{
+    .nav{
+      width: 100%;
+      &-link{
+        @include fonts(18, 23);
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}

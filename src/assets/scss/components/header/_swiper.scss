@@ -42,8 +42,50 @@
     }
   }
 }
+@include media-breakpoint-up(sm) {
+  .swiper-slide {
+    padding-bottom: 0;
+    &__h1 {
+      @include fonts(36, 33)
+    }
 
-@include media-breakpoint-up(lg) {
+    .col-sota-yellow {
+      left: 20%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+
+      .card-img-overlay {
+        width: 200px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .col-sota-red {
+      .card-img-overlay {
+        width: rem-calc(200px);
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .col-sota-grey {
+      left: 80%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+
+      .card-img-overlay {
+        width: 200px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
   .swiper-slide {
     padding-bottom: 0;
     &__h1 {

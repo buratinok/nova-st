@@ -44,3 +44,9 @@
 .fonts-size-12{
   @include fonts(12, 14)
 }
+
+@include media-breakpoint-down(sm) {
+  .fonts-size-14{
+    @include fonts(12, 14)
+  }
+}

@@ -1,12 +1,12 @@
 <section class="section-certificate position-relative py-5">
-    <div class="container">
-        <h2 class="text-left d-inline">Наши сертификаты</h2>
-        <button class="float-right btn btn-outline-danger fonts-size-14 px-4">Смотреть все</button>
-        <div class="row justify-content-between mt-5">
+    <div class="container-md">
+        <h2 class="text-center text-md-left">Наши сертификаты</h2>
+        <button class="float-right btn btn-outline-danger fonts-size-14 px-4 mt-2 mt-md-0">Смотреть все</button>
+        <div class="row row-cols-2 row-cols-sm-4 justify-content-between mt-5">
             {{#repeat 4}}
-            <div class="col">
+            <div class="col mt-2 mt-md-0">
                 <div class="card border-0 border-r0">
-                    <img src="assets/img/certificate.png"/>
+                    <img class="img-fluid" src="assets/img/certificate.png"/>
                 </div>
             </div>
             {{/repeat}}
