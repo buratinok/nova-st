@@ -1,3 +1,22 @@
+@media (max-width: 575.98px) {
+  .section-gallery {
+
+    .pagination-gallery {
+      width: 50%;
+
+      .btn {
+          padding: 1rem!important;
+      }
+      .control-swiper__prev {
+          margin-right: 2px!important;
+      }
+      .control-swiper__next {
+          margin-left: 2px!important;
+      }
+    }
+  }
+}
+
 .section-gallery{
 
     .nav{
