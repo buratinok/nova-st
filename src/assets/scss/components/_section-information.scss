@@ -1,0 +1,22 @@
+.section-information {
+    .card {
+        height: 350px;
+        cursor: pointer;
+        &:hover {
+            border: none;
+            box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.1);;
+            h2 {
+                color: $red;
+            }
+        }
+        
+        .no-gutters {
+            height: 100%;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+}

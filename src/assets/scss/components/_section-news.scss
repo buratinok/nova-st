@@ -46,3 +46,20 @@
         }
     }
 }
+
+@media (max-width: 575.98px) {
+    .section-news {
+        .pagination-news {
+
+            .btn {
+                padding: 1rem!important;
+            }
+            .control-swiper__prev {
+                margin-right: 2px!important;
+            }
+            .control-swiper__next {
+                margin-left: 2px!important;
+            }
+        }
+    }
+}
