@@ -1,0 +1,47 @@
+<section class="section-news py-5">
+    <div class="container">
+        <h2 class="text-left mb-5">Новости</h2>
+        
+        <div class="row">
+                {{#repeat 6}}
+            <div class="col-6 col-md-4 p-2">
+                <div class="card  border-0 " >
+                    <img src="assets/img/news/news.png" class="card-img-top border-r0" alt="photo-news">
+                    <div class="card-body pl-0">
+                        <h5 class="card-title">Название новости длинное название новости</h5>
+                        <p class="news-date">21.02.2020</p>
+                        <p class="card-text">Вторым критерием качества выступает устойчивость материала к истиранию. Под истираемостью понимается способность плитки изменять свои параметры (массу или объем) под влиянием истирающих усилий, например, при движении автотранспорта или при перемещении большой массы людей.</p>
+                        <a href="#" class="btn btn-outline-danger btn-call px-5 py-2">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            {{/repeat}}
+
+            <div class="col pt-4 pagination-news">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center align-items-center ">
+            
+                            <div class="control-swiper__prev btn btn-outline-dark p-4 position-relative mr-3">
+                                <i class="arrow position-absolute center-block"></i>
+                            </div>
+            
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            
+                            <li class="page-item"><a class="page-link" href="#">134</a></li>
+            
+                            <div class="control-swiper__next btn btn-outline-dark p-4 position-relative ml-3">
+                                <i class="arrow position-absolute center-block"></i>
+                            </div>
+                                    
+                        </ul>
+                    </nav>
+                </div>
+
+        </div>
+    </div>
+</section>

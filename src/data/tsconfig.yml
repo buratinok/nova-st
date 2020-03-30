@@ -111,14 +111,6 @@ card-faq:
     controls: collapse5
     title: "- В тех странах, где рабочую визу оформить нельзя, контракты подписывать не имеет смысла. "
   -
-    name:   А точно работа без интима?
-    collapsed:  collapsed
-    id: heading6
-    target: collapse6
-    true: false
-    controls: collapse6
-    title: "- Точно! Никто девушек не заставляет встречаться с гостями вне клуба! За интим в клубе сразу же увольняют."
-  -
     name: Сколько стоит вызвать вашего специалиста на участок?
     collapsed:  collapsed
     id: heading7

@@ -28,6 +28,7 @@
       overflow: hidden;
 
       &:hover img {
+        cursor: pointer;
         width: 380px;
       }
   
@@ -41,25 +42,32 @@
     }
 
     .pagination-gallery {
-        margin-top: 60px;
-    }
+      margin-top: 60px;
+    
+      a {
+          border: none;
+          color: black;
+          font-weight: 500;
 
-    .pagination-gallery a{
-        border: none;
-        &:hover {
-          color: $red2;
-          background: none;
+          &:hover {
+            color: $red;
+            background: none;
+          }
         }
-    }
+      .active {
+        color: $red;
+      }
 
-    .btn {
-      &:hover {
-        .arrow {
-          svg {
-            pointer-events: fill;
-            fill: $light;
+      .btn {
+        &:hover {
+          .arrow {
+            svg {
+              pointer-events: fill;
+              fill: $light;
+            }
           }
         }
       }
     }
+
 }
