@@ -1,35 +1,48 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-bottom bg-white py-0 border-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <ul class="nav justify-content-end d-md-none">
+        <li class="nav-item">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="#" class="btn btn-group__cart btn-outline-dark border-0 py-2">
+                    <i class="cart-icon"></i>
+
+                </a>
+                <button class="btn btn-warning btn-group_price py-2" type="submit">
+                    <i class="download-icon"></i>
+                </button>
+            </div>
+        </li>
+    </ul>
 
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        <ul class="nav nav-pills nav-fill w-100">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle h-100 py-3" href="#" id="catalogDropdown" role="button"
+        <ul class="nav nav-pills nav-fill align-items-baseline align-items-md-center ">
+            <li class="nav-item dropdown px-2 px-md-3">
+                <a class="nav-link dropdown-toggle h-100 py-1 py-md-3 px-0" href="#" id="catalogDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Каталог <i class="fas fa-angle-down ml-1"></i>
+                    Каталог <i class="fas fa-angle-down"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="catalogDropdown">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link h-100 py-3" href="#">Галерея</a>
+            <li class="nav-item px-2 px-md-3">
+                <a class="nav-link h-100 py-3 px-0" href="#">Галерея</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link h-100 py-3" href="#">О компании</a>
+            <li class="nav-item px-2 px-md-3">
+                <a class="nav-link h-100 py-3 px-0" href="#">О компании</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link h-100 py-3" href="#">Наше качество</a>
+            <li class="nav-item px-2 px-md-3">
+                <a class="nav-link h-100 py-3 px-0" href="#">Наше качество</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link h-100 py-3" href="#">Доставка</a>
+            <li class="nav-item px-2 px-md-3">
+                <a class="nav-link h-100 py-3 px-0" href="#">Доставка</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle h-100 py-3" href="#" id="informationDropdown" role="button"
+            <li class="nav-item dropdown px-2 px-md-3">
+                <a class="nav-link dropdown-toggle h-100 py-3 px-0" href="#" id="informationDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Информация <i class="fas fa-angle-down"></i>
                 </a>
@@ -38,12 +51,15 @@
                     <a class="dropdown-item" href="#">Another action</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link h-100 py-3" href="#">Контакты</a>
+            <li class="nav-item px-2 px-md-3">
+                <a class="nav-link h-100 py-3 px-0" href="#">Контакты</a>
             </li>
-            <li class="nav-item h-100">
+        </ul>
+        <ul class="nav justify-content-end d-none d-md-block">
+            <li class="nav-item">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="#" class="btn btn-group__cart btn-outline-dark border-0 my-2 my-sm-0 py-3 px-5" type="submit">
+                    <a href="#" class="btn btn-group__cart btn-outline-dark border-0 my-2 my-sm-0 py-3 px-5"
+                       type="submit">
                         <svg class="cart" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path d="M23.0139 5.00645H4.24886L3.96992 1.89901C3.9243 1.39084 3.49841 1.00146 2.98823 1.00146H0.98564C0.441285 1.00146 0 1.44275 0 1.9871C0 2.53146 0.441285 2.97274 0.98564 2.97274H2.08712C2.68906 9.67894 1.13335 -7.6541 3.22074 15.6025C3.30119 16.5128 3.79302 17.5005 4.6403 18.1717C3.1127 20.1225 4.50846 22.9985 6.99335 22.9985C9.05578 22.9985 10.5104 20.9415 9.80317 18.9933H15.1977C14.4913 20.939 15.9429 22.9985 18.0075 22.9985C19.6553 22.9985 20.9958 21.6579 20.9958 20.0102C20.9958 18.3625 19.6553 17.022 18.0075 17.022H7.00001C6.2513 17.022 5.59886 16.5703 5.31725 15.9122L21.0691 14.9864C21.4991 14.9612 21.8629 14.6595 21.9675 14.2416L23.9702 6.23113C24.1255 5.60999 23.6553 5.00645 23.0139 5.00645ZM6.99335 21.0272C6.43266 21.0272 5.97645 20.571 5.97645 20.0102C5.97645 19.4495 6.43266 18.9933 6.99335 18.9933C7.55408 18.9933 8.01029 19.4495 8.01029 20.0102C8.01029 20.571 7.55408 21.0272 6.99335 21.0272ZM18.0075 21.0272C17.4468 21.0272 16.9906 20.571 16.9906 20.0102C16.9906 19.4495 17.4468 18.9933 18.0075 18.9933C18.5682 18.9933 19.0244 19.4495 19.0244 20.0102C19.0244 20.571 18.5682 21.0272 18.0075 21.0272ZM20.2306 13.061L5.05192 13.9531L4.4258 6.97768H21.7516L20.2306 13.061Z"
@@ -68,6 +84,40 @@
                 </div>
             </li>
         </ul>
-
+        <hr class="d-md-none">
+        <div class="col-auto d-flex flex-column align-items-center d-md-none px-0">
+            <div class="media align-items-center mt-4">
+                <h4 class="fas fa-map-marker-alt m-0 text-muted"></h4>
+                <div class="media-body media-body__address ml-3">
+                    <h6 class="mt-0 fonts-size-10">Моск. область, посёлок Нахабино, ул Победы дом 3</h6>
+                    <p class="text-muted m-0 fonts-size-10">Ежедневно с 09:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="media align-items-center mt-4">
+                <div class="media-body media-body__contact ml-3">
+                    <h5 class="m-0 font-weight-bold fonts-size-14">+7 495 374 70 61</h5>
+                    <a href="#" class="text-dark fonts-size-12">
+                        <i class="fab fa-whatsapp text-success"></i>
+                        Написать в WhatsUp
+                    </a>
+                </div>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-around mt-4 w-100">
+                <li>
+                    <a href="/">
+                        <img src="assets/img/footer/vk .png" height="26" width="25"/>
+                    </a></li>
+                <li>
+                    <a href="/">
+                        <img src="assets/img/footer/instagram.png" height="26" width="25"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <img src="assets/img/footer/facebook.png" height="26" width="25"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

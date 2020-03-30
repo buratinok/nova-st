@@ -38,3 +38,9 @@
 .fonts-size-14{
   @include fonts(14, 16)
 }
+.fonts-size-10{
+  @include fonts(10, 13)
+}
+.fonts-size-12{
+  @include fonts(12, 14)
+}

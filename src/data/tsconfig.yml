@@ -34,17 +34,20 @@ sota:
     img: sota-yellow
     class: "position-absolute z-0"
     col: 5
+    colsm: 7
   -
     title: Тротуарная плитка
     description: от 490 Р / шт
     class: "z-1"
     img: sota-red
     col: 7
+    colsm: 9
   -
     description: Бордюры
     img: sota-grey
     class: "position-absolute z-0"
     col: 5
+    colsm: 7
 
 questions:
   -

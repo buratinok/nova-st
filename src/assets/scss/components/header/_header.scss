@@ -49,26 +49,41 @@
       }
     }
   }
-
+  .navbar-toggler-icon {
+    background-image: url("../img/svg/toggler-icon.svg");
+    width: 38px;
+    height: 18px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .navbar-bottom {
     .nav {
       .nav-link {
+        position: relative;
+        text-align: left;
         color: #000;
+
         &:hover {
-          background-color: #000;
-          color: #fff;
+          background-color: #fff;
+          color: $danger;
         }
       }
 
       .nav-item {
+        width: 100%;
+
         .dropdown-menu {
+          position: relative;
+          border: none;
           border-radius: 0;
+          transition: width 2s;
         }
       }
 
       .show {
         .nav-link {
-          color: #fff;
+          color: $danger;
 
           &::after {
             transform: rotate(180deg);
@@ -84,6 +99,7 @@
         vertical-align: 0;
       }
     }
+
     .nav-pills .nav-link {
       border-radius: 0;
     }
@@ -102,6 +118,174 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .header {
+    .navbar-collapse {
+      position: absolute;
+      background: white;
+      width: 70%;
+      padding: 0 1.5rem;
+      top: 100%;
+      left: 0px;
+      z-index: 1050;
+
+
+      .nav {
+        .show{
+          .nav-link{
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+        }
+        &-link {
+          position: relative;
+
+          i {
+            position: absolute;
+            text-align: right;
+            left: 100%;
+
+            svg {
+              transform: rotate(-90deg);
+              transition: all .2s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+  .header {
+    .navbar-top {
+      .navbar-brand {
+        h1 {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: rem-calc(100px);
+          height: rem-calc(41px);
+        }
+      }
+
+      &__title {
+        @include fonts(16, 18)
+      }
+
+      .media {
+        &-body {
+          &__address {
+            h6 {
+              @include fonts(12, 15)
+            }
+
+            p {
+              @include fonts(12, 15)
+            }
+          }
+
+          &__contact {
+            h5 {
+              @include fonts(16, 19)
+            }
+
+            a {
+              @include fonts(14, 16)
+            }
+          }
+        }
+      }
+
+      .btn {
+        &-call {
+          @include fonts(14, 16);
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .navbar-bottom {
+
+      .nav {
+        .nav-link {
+          color: #000;
+
+          &:hover {
+            position: relative;
+            background-color: transparent;
+            color: $danger;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 7px;
+              background: $danger;
+              top: 100%;
+              left: 0;
+            }
+          }
+
+          &:focus {
+            background: transparent;
+          }
+        }
+
+        .nav-item {
+          width: auto;
+
+          .dropdown-menu {
+            position: absolute;
+            border-radius: 0;
+          }
+
+          /*&:hover {*/
+
+          /* }*/
+        }
+
+        .show {
+          .nav-link {
+            color: $danger;
+            svg{
+              transform: rotate(180deg);
+              transition: all .5s;
+            }
+          }
+        }
+      }
+
+      .dropdown-toggle {
+        &::after {
+          border: none;
+          vertical-align: 0;
+        }
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 0;
+      }
+
+      .btn-group {
+        > .btn {
+          border-radius: 0;
+        }
+
+        &__cart {
+          &:hover .cart {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
 
 @keyframes fa-spin {
   0% {

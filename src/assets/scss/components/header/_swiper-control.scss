@@ -1,7 +1,7 @@
 
 .control-swiper {
-  top: 80%;
-  left: 80%;
+  top: 93%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   &__next {
@@ -14,6 +14,29 @@
         svg {
           pointer-events: fill;
           fill: white;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .control-swiper {
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+
+    &__next {
+      transform: rotate(180deg);
+    }
+
+    .btn {
+      &:hover {
+        .arrow {
+          svg {
+            pointer-events: fill;
+            fill: white;
+          }
         }
       }
     }
