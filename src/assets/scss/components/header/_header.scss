@@ -116,6 +116,9 @@
       }
     }
   }
+  .nav-pills .show > .nav-link {
+     background-color: transparent;
+  }
 }
 
 @include media-breakpoint-down(sm) {
