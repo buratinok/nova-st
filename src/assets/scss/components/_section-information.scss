@@ -3,7 +3,7 @@
         text-decoration: none;
         color: black;
     }
-    .card {
+    .card-information {
         min-height: 350px;
         cursor: pointer;
         &:hover {
@@ -15,38 +15,5 @@
             }
         }
         
-        .no-gutters {
-            min-height: 350px;
-        }
-        h2 {
-            font-weight: 500;
-            font-size: 34px;
-            line-height: 42px;
-        }
-    }
-}
-
-@media (max-width: 767.98px) {
-    .section-information {
-        .card {
-            min-height: 365px;
-
-            h2 {
-                font-size: 30px;
-
-            }
-        }
-    }
-}
-@media (max-width: 575.98px) {
-    .section-information {
-        .card {
-            min-height: 250px;
-
-            h2 {
-                font-size: 25px;
-
-            }
-        }
     }
 }
