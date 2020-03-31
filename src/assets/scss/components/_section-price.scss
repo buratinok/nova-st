@@ -55,6 +55,12 @@
 }
 @include media-breakpoint-up(md) {
   .section-price {
+    background-position-x: rem-calc(-370px);
+
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-price {
     background-position: -20%;
 
   }

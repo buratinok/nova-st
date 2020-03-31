@@ -77,8 +77,14 @@
     }
   }
 }
-
 @include media-breakpoint-up(md) {
+  .section-catalog {
+    .card-sm {
+      padding: rem-calc(50px)
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
   .section-catalog {
     .card-sm {
       padding: rem-calc(76px)
