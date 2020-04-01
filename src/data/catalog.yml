@@ -2,18 +2,36 @@
 catalog:
   -
     title: Тротуарная плитка
+    true: true
+    tab: rotary-tile
     active: active
+    show: show
   -
     title: Бордюры
+    tab: borders
+    true: true
+
   -
     title: Облицовочная плитка
+    tab: facing-tile
+    true: true
   -
     title: Крышки на столбы
+    tab: pillar-covers
+    true: true
   -
     title: Ступени
+    tab: steps
+    true: true
   -
     title: Водостоки
+    tab: gutters
+    true: true
   -
     title: Блоки
+    tab: blocks
+    true: true
   -
-    titleye: ЖБИ изделия
+    title: ЖБИ изделия
+    tab: concrete-products
+    true: true

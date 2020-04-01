@@ -1,15 +1,105 @@
-
-
-<section class="section-catelog">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<section class="section-catalog-category py-5">
+    <div class="container-lg">
+        <ul class="nav flex-column align-items-center flex-nowrap flex-sm-row nav-pills mb-3" id="pills-tab"
+            role="tablist">
             {{#each catalog.catalog}}
-        <li class="nav-item">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
-               href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">{{title}}</a>
-        </li>
-        {{/each}}
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
+            <li class="nav-item align-self-stretch border ml-2">
+                <a class="nav-link text-center {{active}}" id="pills-{{tab}}-tab" data-toggle="pill"
+                   href="#pills-{{tab}}" role="tab" aria-controls="pills-{{tab}}"
+                   aria-selected="{{true}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="catalog-form my-5 py-5 border-bottom border-top">
+        <div class="container-fluid container-lg">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-row flex-column flex-md-row">
+                            <div class="col">
+                                <label for="formPrice" class="font-weight-bold fonts-size-14">Цена</label>
+                                <input type="text" class="form-control" id="formPrice" placeholder="от">
+
+                            </div>
+                            <div class="col">
+                                <label for="formPrice2"
+                                       class="font-weight-bold fonts-size-14 invisible">Цена2</label>
+                                <input type="text" class="form-control" id="formPrice2" placeholder="до">
+                            </div>
+                            <div class="col">
+                                <label for="modeProduction" class="font-weight-bold fonts-size-14">Способ
+                                    производства</label>
+                                <select id="modeProduction" class="form-control">
+                                    <option selected>Не выбран</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="theAppointment"
+                                       class="font-weight-bold fonts-size-14">Назначение</label>
+                                <select id="theAppointment" class="form-control">
+                                    <option selected>Дачный</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="theSize" class="font-weight-bold fonts-size-14">Назначение</label>
+                                <select id="theSize" class="form-control">
+                                    <option selected>80 (100х200х80)</option>
+                                    <option>80 (100х200х80)</option>
+                                    <option>80 (100х200х80)</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="otherParameters" class="font-weight-bold fonts-size-14">Другие
+                                    параметры</label>
+                                <select id="otherParameters" class="form-control">
+                                    <option selected>Тонкий</option>
+                                    <option>Тонкий</option>
+                                    <option>Тонкий</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </div>
+    <div class="catalog-category__tab container-lg">
+        <div class="row">
+            <div class="tab-content w-100" id="pills-tabContent">
+                {{#each catalog.catalog}}
+                <div class="tab-pane fade {{show}} {{active}}" id="pills-{{tab}}" role="tabpanel"
+                     aria-labelledby="pills-{{tab}}">
+                    {{>card-catalog}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg py-5">
+        <div class="row">
+            <div class="col">
+                <p class="text-left">Оригинальные фигурные элементы мощения приобрели огромную популярность не только у
+                    профессиональных строителей, но и у частных лиц, которые желают качественно и красиво уложить
+                    тротуарную плитку на своих прилегающих участках. Наша компания поможет вам сделать правильный выбор
+                    плитки, при котором необходимо руководствоваться рядом факторов, влияющим на многие ее свойства.
+                    Тротуарная плитка должна иметь красивый внешний вид и ее изготовление должно соответствовать всем
+                    техническим показателям.Оригинальные фигурные элементы мощения приобрели огромную популярность не
+                    только у профессиональных строителей, но и у частных лиц, которые желают качественно и красиво
+                    уложить тротуарную плитку на своих прилегающих участках. Наша компания поможет вам сделать
+                    правильный выбор плитки, при котором необходимо руководствоваться рядом факторов, влияющим на многие
+                    ее свойства. Тротуарная плитка должна иметь красивый внешний вид и ее изготовление должно
+                    соответствовать всем техническим показателям.</p>
+            </div>
+        </div>
+
+    </div>
+
+
 </section>
