@@ -2,63 +2,22 @@
     <div class="container-md">
         <h2 class="text-left mb-4">Информация</h2>
         <div class="row">
-
-            <a class="col-12 col-sm-6 p-2" href="news.html">
-                <div class="card border-r0 card-information">
-                    <div class="row no-gutters align-items-center justify-content-center">
+            {{#each info.info}}
+            <div class="col-12 col-sm-6 p-2">
+                <div class="card border-r0 h-100 px-4 card-information align-items-center">
+                    <div class="row no-gutters h-100 w-100 align-items-center justify-content-center">
                         <div class="col-12 col-md-6">
-                            <div class="card-body">
-                                <h2 class="card-title text-center">НОВОСТИ</h2>
+                            <div class="card-body  p-0 text-center">
+                                <a class="card-title stretched-link h2  text-uppercase" href="{{link}}">{{title}}</a>
                             </div>
                         </div>
-                        <div class="col-8 col-md-6 d-flex justify-content-center p-3">
-                            <img src="assets/img/information/1.png" class=" img-fluid" alt="...">
+                        <div class="col-8 col-md-6 d-flex justify-content-center">
+                            <img src="assets/img/information/{{img}}.png" class="img-fluid" alt="{{title}}">
                         </div>
                     </div>
                 </div>
-            </a>
-            <a class="col-12 col-sm-6 p-2" href="mm-about-us.html">
-                <div class="card border-r0 card-information">
-                    <div class="row no-gutters align-items-center justify-content-center">
-                        <div class="col-12 col-md-6">
-                            <div class="card-body ">
-                                <h2 class="card-title text-center">СМИ О НАС</h2>
-                            </div>
-                        </div>
-                        <div class="col-8 col-md-6 d-flex justify-content-center p-3">
-                            <img src="assets/img/information/2.png" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="col-12 col-sm-6 p-2" href="news.html">
-                <div class="card border-r0 card-information">
-                    <div class="row no-gutters align-items-center justify-content-center">
-                        <div class="col-12 col-md-6">
-                            <div class="card-body">
-                                <h2 class="card-title text-center">НАШ РУКОВОДИТЕЛЬ</h2>
-                            </div>
-                        </div>
-                        <div class="col-8 col-md-6 d-flex justify-content-center p-3">
-                            <img src="assets/img/information/3.png" class=" img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="col-12 col-sm-6 p-2" href="news.html">
-                <div class="card border-r0 card-information">
-                    <div class="row no-gutters align-items-center justify-content-center">
-                        <div class="col-12 col-md-6">
-                            <div class="card-body">
-                                <h2 class="card-title text-center">ЧАСТЫЕ ВОПРОСЫ</h2>
-                            </div>
-                        </div>
-                        <div class="col-8 col-md-6 d-flex justify-content-center p-3">
-                            <img src="assets/img/information/4.png" class=" img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </a>
+            </div>
+            {{/each}}
         </div>
     </div>
 </section>

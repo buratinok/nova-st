@@ -28,7 +28,7 @@
     }
 }
 
-@media (max-width: 575.98px) {
+@include media-breakpoint-down(xs) {
     .pagination-arow {
         ul li {
             display: none;

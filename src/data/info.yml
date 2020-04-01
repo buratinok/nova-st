@@ -1,0 +1,19 @@
+info:
+  -
+    title: Новости
+    img: 1
+    link: news.html
+  -
+    title: Сми о нас
+    img: 2
+    link: mm-about-us.html
+
+  -
+    title: Наш руководитель
+    img: 3
+    link: #
+
+  -
+    title: Частые вопросы
+    img: 4
+    link: #
