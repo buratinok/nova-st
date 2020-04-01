@@ -34,6 +34,21 @@
 .z-2{
   z-index: 1020;
 }
+.badge-gradient{
+  background: linear-gradient(124.86deg, #FDD980 12.95%, #FD8080 88.07%);
+}
+.border-l-r0{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.colours-wrapper{
+    li{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+}
 
 .fonts-size-14{
   @include fonts(14, 16)
