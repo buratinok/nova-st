@@ -1,0 +1,37 @@
+
+.pagination-arow {
+    
+    a {
+        border: none;
+        color: black;
+        font-weight: 500;
+
+        &:hover {
+            color: $red;
+            background: none;
+        }
+    }
+
+    .active {
+        color: $red;
+    }
+
+    .btn {
+        &:hover {
+          .arrow {
+            svg {
+              pointer-events: fill;
+              fill: $light;
+            }
+          }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .pagination-arow {
+        ul li {
+            display: none;
+        }
+    }
+  }
