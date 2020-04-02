@@ -1,0 +1,10 @@
+<ul class="nav flex-column align-items-center flex-nowrap flex-md-row nav-pills mb-3" id="pills-tab"
+    role="tablist">
+    {{#each catalog.catalog}}
+    <li class="nav-item align-self-stretch border ml-2">
+        <a class="nav-link text-center {{active}}" id="pills-{{tab}}-tab" data-toggle="pill"
+           href="#pills-{{tab}}" role="tab" aria-controls="pills-{{tab}}"
+           aria-selected="{{true}}">{{title}}</a>
+    </li>
+    {{/each}}
+</ul>

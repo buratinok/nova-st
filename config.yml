@@ -27,7 +27,9 @@ PATHS:
 
   #каталог картинок
   img:
-    - './src/assets/img/**/*'
+    - './src/assets/img/**/*.jpg'
+    - './src/assets/img/**/*.png'
+    - './src/assets/img/**/*.svg'
 
   #каталог шрифтов
   fonts:

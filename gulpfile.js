@@ -31,7 +31,7 @@ $.sass.compiler = require('node-sass');
 const {COMPATIBILITY, PORT, PATHS} = loadConfig();
 
 function loadConfig() {
-    let ymlFile = fs.readFileSync('config.yml', 'utf8');
+    let ymlFile = fs.readFileSync('config.yml', 'utf8'); //readFileSync
     return yaml.load(ymlFile);
 }
 
