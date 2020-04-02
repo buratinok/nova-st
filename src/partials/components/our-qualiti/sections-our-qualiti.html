@@ -1,0 +1,36 @@
+<section class="section-our-qualiti py-5">
+    <div class="container-md">
+        <div class="row">
+
+            <div class="card mb-3 border-0">
+                <div class="row no-gutters">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h1 class="card-title mb-4">Наше качество</h1>
+                            <p class="card-text">Вопрос о качестве изделия всегда является акутальным для каждого покупателя. В доказательство высокого качества нашей продукции привдем несколько цифр, результат сопоставления которых с требованиями ГОСТ будет красноречивее любых слов свидетельствовать об уровне нашей продукции.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 px-3 px-md-0">
+                        <img src="assets/img/our-quality/our-quality.png" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">   
+            <div class="card-columns card-columns_2">
+                {{#each qualiti.qualiti}}
+                <div class="card border-0 w-100">
+                    <div class="card-body py-1 py-md-3">
+                        <h5 class="card-title">
+                            <i class="{{class}} mr-1"></i>
+                            {{title}}
+                        </h5>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                </div>
+                {{/each}}       
+            </div>
+        </div>
+        <p class="note">Приведенные характеристики нашего материала не отражают всех аспектов, влияющих на качество, но дают возможность сопоставить их с показателями других производителей. А это в свою очередь позволяет вам сделать сознательный выбор в пользу надежного и качественного изделия.</p>
+    </div>
+</section>
