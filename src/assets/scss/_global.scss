@@ -49,6 +49,9 @@
       }
     }
 }
+.scroll-x{
+  overflow-x: scroll;
+}
 
 .fonts-size-14{
   @include fonts(14, 16)

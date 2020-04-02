@@ -13,6 +13,5 @@ $carouselHeader();
 $answer();
 $increaseImages();
 
-/*new Glider(document.querySelector('.glider'));*/
 
 
