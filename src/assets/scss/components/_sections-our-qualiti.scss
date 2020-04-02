@@ -3,6 +3,9 @@
         .card-columns_2 {
             column-count: 1;
 
+            .indicators {
+                flex-direction: column;
+            }
         }
     }
 }
