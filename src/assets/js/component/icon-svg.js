@@ -235,16 +235,13 @@ const $iconSvg = function () {
         $('.arrow-bottom').html($arrowBottom);
         $('.cart-icon').html($cartIcon);
         $('.download-icon').html($downloadIcon);
-<<<<<<< HEAD
         $('.fire-icon').html($fireIcon);
         $('.label-icon').html($labelIcon);
-=======
         $('.frost-icon').html($frostIcon);
         $('.cube-icon').html($cubeIcon);
         $('.certificate-icon').html($certificateIcon);
         $('.sustainability-icon').html($sustainabilityIcon);
         $('.drop-icon').html($dropIcon);
->>>>>>> 5559c504557d305b36fba35ebea319a31a7a73b5
     });
 }
 
