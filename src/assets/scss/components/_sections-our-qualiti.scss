@@ -1,8 +1,17 @@
+@include media-breakpoint-down(xs) {
+    .section-our-qualiti {
+        .card-columns_2 {
+
+            .indicators {
+                flex-direction: column;
+            }
+        }
+    }
+}
 @include media-breakpoint-down(sm) {
     .section-our-qualiti {
         .card-columns_2 {
             column-count: 1;
-
         }
     }
 }
