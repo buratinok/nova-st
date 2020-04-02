@@ -216,6 +216,9 @@ const $iconSvg = function () {
             '</clipPath>\n' +
             '</defs>\n' +
             '</svg>\n'
+        var $deliveryLine = '<svg width="50" height="2" viewBox="0 0 50 2" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                            '<line y1="1.39111" x2="50" y2="1.39111" stroke="black" stroke-opacity="0.25"/>\n' +
+                            '</svg>';
 
         $('.snowflake').html($snowflake);
         $('.drops').html($drops);
@@ -242,6 +245,7 @@ const $iconSvg = function () {
         $('.certificate-icon').html($certificateIcon);
         $('.sustainability-icon').html($sustainabilityIcon);
         $('.drop-icon').html($dropIcon);
+        $('.line-delivery').html($deliveryLine);
     });
 }
 

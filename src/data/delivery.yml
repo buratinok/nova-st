@@ -1,0 +1,17 @@
+delivery:
+  -
+    line: line-delivery
+    text: расчет необходимого количества плитки;
+    class: col-md-5
+  -
+    line: line-delivery
+    text: на выбор несколько вариантов эксклюзивного рисунка для кладки плитки;
+    class: col-md-7
+  - 
+    line: line-delivery
+    text: бесплатную консультацию профессионалов;
+    class: col-md-5
+  -
+    line: line-delivery
+    text: адаптацию вариантов укладки с ландшафтным особенностями вашего участа.
+    class: col-md-7
