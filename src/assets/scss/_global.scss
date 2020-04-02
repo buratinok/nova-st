@@ -68,3 +68,9 @@
     @include fonts(12, 14)
   }
 }
+
+.card-columns_2{
+    column-count: 2;
+    grid-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+}

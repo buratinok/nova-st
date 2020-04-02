@@ -1,0 +1,8 @@
+@include media-breakpoint-down(sm) {
+    .section-our-qualiti {
+        .card-columns_2 {
+            column-count: 1;
+
+        }
+    }
+}
