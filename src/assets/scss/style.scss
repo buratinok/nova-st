@@ -13,6 +13,7 @@
 @import "~hover.css/scss/mixins";
 @import "~hover.css/scss/hacks";
 @import "~bourbon/core/bourbon.scss";
+@import "~rfs/scss";
 @import "functions/functions";
 @import "mixin/mixin";
 @import "global";
@@ -41,4 +42,4 @@
 @import "components/pagination-arow/pagination-arow";
 @import "components/section-our-leader";
 @import "components/sections-our-qualiti";
-
+@import "components/plus-minus";
