@@ -46,6 +46,15 @@ const $carouselHeader = function () {
         },
     });
 
+    /*карусель страницы продуктов укладка*/
+
+    var swiperProductInfo = new Swiper('.product-info-product', {
+        navigation: {
+            nextEl: '.control-info__next',
+            prevEl: '.control-info__prev',
+        },
+    });
+
 };
 
 export default $carouselHeader;

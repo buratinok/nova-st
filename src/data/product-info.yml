@@ -1,0 +1,14 @@
+
+info:
+  -
+    item: Описание
+    description: Description
+    true: true
+    tab: description
+    active: active
+    show: show
+  -
+    item: Технологии производства
+    description: Production technology
+    true: false
+    tab: production-technology

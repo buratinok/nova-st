@@ -55,9 +55,13 @@
       }
     }
 }
-.scroll-x{
-  overflow-x: scroll;
+@include media-breakpoint-down(sm) {
+  .scroll-x{
+    overflow-x: scroll;
+    overflow-scrolling: touch;
+  }
 }
+
 .text-gray{
   color: rgba(0, 0, 0, 0.5)
 }

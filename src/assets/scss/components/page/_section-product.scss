@@ -1,18 +1,68 @@
 @import "swiper-product";
+@import "~hover.css/scss/effects/2d-transitions/grow";
 
-.section-product{
-      .btn-outline-danger{
+.section-product {
+  .btn-outline-danger {
+    &:hover {
+      color: white;
+
+      svg {
+        fill: white;
+      }
+    }
+
+    svg {
+      fill: $danger;
+    }
+  }
+
+  .gallery-thumbs {
+    margin-top: rem-calc(114px);
+  }
+    .product-color{
+      li{
         &:hover{
-          color: white;
-          svg{
-            fill: white;
+          cursor: pointer;
+          @include grow();
+        }
+      }
+    }
+    .nav{
+      &-link{
+        color: $dark;
+        &.active{
+          position: relative;
+          background-color: transparent;
+          color: $danger;
+          &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $danger;
+            bottom: 0;
+            left: 0;
           }
         }
-        svg{
-          fill: $danger;
-        }
       }
-      .gallery-thumbs{
-          margin-top: rem-calc(114px);
+    }
+    .btn{
+      &:hover{
+        color: white;
       }
+    }
+
+}
+
+@include media-breakpoint-down(sm) {
+  .section-product{
+    .nav{
+      width: 100%;
+      &-link{
+        @include fonts(18, 23);
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
 }

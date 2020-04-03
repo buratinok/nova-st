@@ -30,8 +30,8 @@
                               <div class="col d-flex justify-content-between pt-5">
                                  <div class="text-left">
                                  {{>plus-minus}}
-                                 <h3 class="d-inline ml-1">
-                                    м2
+                                 <h3 class="d-inline ml-3">
+                                    м <sup>2</sup2>
                                  </h3>
                                  </div>
                                  <div class="font-weight-bold d-inline-flex flex-column"><span class="h4 text-gray"><del>
@@ -53,4 +53,32 @@
             </div>
          </div>
       </div>
+      <div class="row">
+         <div class="col-12 pt-5">
+            <h2 class="mb-4">Цвета</h2>
+            {{>product-color}}
+         </div>
+      </div>
+      <hr>
+      <div class="row">
+         <div class="card border-0 mb-3 py-5">
+            <div class="row no-gutters">
+               <div class="col-md-6">
+                  {{>product-info}}
+               </div>
+               <div class="col-md-6">
+                  <div class="d-flex align-items-center h-100">
+                     {{>product-info-carousel}}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col pb-5">
+            <h2 class="mb-4">С этим покупают</h2>
+            {{>card}}
+         </div>
+      </div>
+   </div>
 </section>

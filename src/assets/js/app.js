@@ -14,7 +14,3 @@ $carouselHeader();
 $answer();
 $increaseImages();
 $plusMinus();
-
-
-
-
