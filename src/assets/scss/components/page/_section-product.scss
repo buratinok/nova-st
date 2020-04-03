@@ -1,3 +1,18 @@
-.section-product{
+@import "swiper-product";
 
+.section-product{
+      .btn-outline-danger{
+        &:hover{
+          color: white;
+          svg{
+            fill: white;
+          }
+        }
+        svg{
+          fill: $danger;
+        }
+      }
+      .gallery-thumbs{
+          margin-top: rem-calc(114px);
+      }
 }

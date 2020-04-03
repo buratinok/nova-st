@@ -23,6 +23,29 @@ const $carouselHeader = function () {
         },
     });
 
+    /*карусель страницы продуктов*/
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 2, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.control-product__next',
+            prevEl: '.control-product__prev',
+        },
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        loop:true,
+        loopedSlides: 2, //looped slides should be the same
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+
 };
 
 export default $carouselHeader;

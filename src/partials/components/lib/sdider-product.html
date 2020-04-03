@@ -4,15 +4,22 @@
     <div class="swiper-slide"><img src="assets/img/card/mask-group.png" alt="card product"></div>
     {{/repeat}}
   </div>
-  <!-- Add Arrows -->
-  <div class="swiper-button-next swiper-button-white"></div>
-  <div class="swiper-button-prev swiper-button-white"></div>
 </div>
-<div class="swiper-container gallery-thumbs w-50">
+<div class="swiper-container gallery-thumbs w-50 z-2">
   <div class="swiper-wrapper">
     {{#repeat 5}}
     <div class="swiper-slide"><img src="assets/img/card/mask-group.png" alt="card product"
         style="width: 70px; height: 70px;"></div>
     {{/repeat}}
+  </div>
+</div>
+
+<!-- Add Arrows -->
+<div class="control-product position-absolute d-flex justify-content-between mt-md-4 z-1">
+  <div class="control-product__prev btn btn-outline-danger p-4 position-relative ml-3">
+    <i class="arrow position-absolute center-block"></i>
+  </div>
+  <div class="control-product__next btn btn-outline-danger p-4 position-relative ml-3">
+    <i class="arrow position-absolute center-block"></i>
   </div>
 </div>
