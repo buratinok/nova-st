@@ -1,0 +1,13 @@
+contacts:
+  -
+    img: phone-red-icon
+    line: line-delivery
+    text: +7 (495) 191-48-10
+  -
+    img: email-red-icon
+    line: line-delivery
+    text: info@nova-st.ru
+  - 
+    img: check-box-red-icon
+    line: line-delivery
+    text: Московская область, поселок Нахабино, ул. Победы, дом 3

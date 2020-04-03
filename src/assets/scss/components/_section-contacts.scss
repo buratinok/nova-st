@@ -1,0 +1,13 @@
+.section-contacts {
+	.card {
+		&-text {
+			@include fonts(20, 23);
+		}
+	}
+
+	.alert {
+		background: #E97A5A;
+		border-radius: 10px;
+		@include fonts(16, 16);
+	}
+}
