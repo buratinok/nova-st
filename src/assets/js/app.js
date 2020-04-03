@@ -1,6 +1,6 @@
 /**
-* Модули скрипты бандл
-* */
+ * Модули скрипты бандл
+ * */
 
 import $iconSvg from "./component/icon-svg";
 import $carouselHeader from "./component/carousel";
@@ -14,3 +14,17 @@ $carouselHeader();
 $answer();
 $increaseImages();
 $plusMinus();
+
+
+var $btnColour = document.querySelectorAll('.btn-colour');
+
+
+$btnColour.forEach(function (e) {
+
+    e.addEventListener('click', function (el) {
+        $btnColour.forEach(function (element) {
+            element.classList.remove('active');
+        })
+        this.classList.add('active');
+    })
+});
