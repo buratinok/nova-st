@@ -1,0 +1,22 @@
+.section-404 {
+    .bottom-links {
+        a {
+        color: rgba(0, 0, 0, 0.75);
+        @include fonts(16, 18);
+
+        }
+    }
+
+    .btn {
+      &-call {
+        @include fonts(14, 16);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .subscribe {
+        @include fonts(14, 16);
+    }
+}
