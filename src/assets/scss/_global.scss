@@ -75,6 +75,12 @@
 .fonts-size-12{
   @include fonts(12, 14)
 }
+.fonts-size-18{
+  @include fonts(18, 21)
+}
+.fonts-size-20{
+  @include fonts(20, 23)
+}
 
 @include media-breakpoint-down(sm) {
   .fonts-size-14{

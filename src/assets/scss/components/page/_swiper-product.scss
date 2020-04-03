@@ -19,10 +19,32 @@
     }
   }
 }
+@include media-breakpoint-down(sm) {
+  .control-product {
+    top: 75%;
+    left: 48%;
+    width: 95%;
+    transform: translate(-50%, -50%);
 
+    &__next {
+      transform: rotate(180deg);
+    }
+
+    .btn {
+      &:hover {
+        .arrow {
+          svg {
+            pointer-events: fill;
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
 @include media-breakpoint-up(sm) {
   .control-product {
-    top: 89%;
+    top: 72%;
     left: 45%;
     width: 90%;
     transform: translate(-50%, -50%);

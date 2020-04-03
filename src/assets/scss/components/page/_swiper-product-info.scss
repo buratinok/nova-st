@@ -19,7 +19,28 @@
     }
   }
 }
+@include media-breakpoint-down(sm) {
+  .control-info {
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    &__next {
+      transform: rotate(180deg);
+    }
+
+    .btn {
+      &:hover {
+        .arrow {
+          svg {
+            pointer-events: fill;
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
 @include media-breakpoint-up(sm) {
   .control-info {
     top: 50%;
