@@ -39,6 +39,7 @@
     "node-sass-tilde-importer": "^1.0.2",
     "panini": "^1.6.3",
     "postcss-preset-env": "^6.7.0",
+    "rfs": "^9.0.2",
     "vinyl-named": "^1.1.0",
     "webpack": "^4.42.1",
     "webpack-stream": "^5.2.1",
