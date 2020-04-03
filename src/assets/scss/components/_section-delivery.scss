@@ -11,25 +11,7 @@
 		@include fonts(16, 16);
 	}
 
-	.can-get {
-		&__text {
-
-			&:before {
-			content: "";
-		    position: absolute;
-		    width: 3rem;
-		    height: 1px;
-		    opacity: .25;
-		    background-color: #000;
-		    top: 40%;
-		    transform: translate(50%, -50%);
-		    right: 100%;
-			}
-		}
-
-	}
-
 	.pre-pay {
-		@include fonts(12, 14);
+		@include fonts(14, 16);
 	}
 }
