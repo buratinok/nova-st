@@ -1,0 +1,49 @@
+<section class="section-our-qualiti pt-3 pb-5">
+    <div class="container-lg">
+        <h1 class="card-title mb-3">О компании</h1>
+        <div class="row">
+            <div class="card mb-3 border-0">
+                <div class="row no-gutters">
+                    <div class="order-1 order-md-0 col-md-6">
+                        <div class="card-body">
+                            <h3 class="card-title pt-3 pb-3">Компания ООО “НоВа-Строй” успешно ведет свою деятельность с 2005 года.</h3>
+                            <p class="card-text">Специализируясь на изготовлении тротуарной плитки по двум технологиям (вибропресс и вибролитье), компания предлагает качественную продукцию, отвечающую всем техническим нормам.</p>
+                            <p class="card-text">Расположившись в 18 км от МКАД в направлении Волоколамского шоссе, компания ООО “НоВа-Строй” занимает площадь 9500 кв.м., при этом только под произдводственные площади отведено 2500 кв.м.</p>
+                        </div>
+                    </div>
+                    <div class="order-0 order-md-1 col-12 col-md-6 pl-5">
+                        <img src="assets/img/about-company/plant.png" class="img-fluid mx-auto d-block" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <hr>
+
+    <div class="container-lg pt-4">
+        <div class="row">
+            <div class="card mb-0 mb-lg-5 border-0">
+                <div class="row ">
+                    <div class="col-12 col-lg-6 px-0">
+                        <img src="assets/img/about-company/factory-workshop.png" class="img-fluid mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card-body py-1  pl-3 pl-lg-5">
+                            <p class="card-text h4 font-weight-light pt-2 pt-lg-1">Модернизация производство и внедряя инновационные методики для изготолвения качественной экологиеской продукции, компания ООО “НоВа-Строй! достигла многого. В частности:</p>
+                            <div class="row">
+                                {{#each about-company.about-company}}
+                                    <div class="col-12 col-md-6 pt-2 pt-md-4">
+                                        <h4 class="mb-0">{{title}}</h4>
+                                        <i class="{{line}} mr-2"></i>
+                                        <p>{{text}}</p>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
