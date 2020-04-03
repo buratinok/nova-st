@@ -52,6 +52,9 @@
 .scroll-x{
   overflow-x: scroll;
 }
+.text-gray{
+  color: rgba(0, 0, 0, 0.5)
+}
 
 .fonts-size-14{
   @include fonts(14, 16)
