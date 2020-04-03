@@ -1,4 +1,7 @@
 .section-404 {
+    h3 {
+        @include font-size(26px);
+    }
     .bottom-links {
         a {
         color: rgba(0, 0, 0, 0.75);
