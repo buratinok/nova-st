@@ -1,9 +1,20 @@
 
 
-.modall-feedback{
+.modal-feedback{
       &__image{
         top: 63%;
         left: 88%;
         transform: translate(-50%, -50%);
       }
+}
+
+@include media-breakpoint-down(sm) {
+  .modal{
+    &-title{
+      @include font-size(24px)
+    }
+    &-description{
+      @include font-size(14px)
+    }
+  }
 }
