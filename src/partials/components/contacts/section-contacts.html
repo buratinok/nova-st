@@ -1,0 +1,66 @@
+<section class="section-contacts">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+
+                {{#each contacts.contacts}}
+                <div class="col-12 col-sm-6 col-md-4 pb-3 pb-sm-0 text-center text-md-left">
+                    <i class="{{img}} mr-2 "></i><br>
+                    <i class="{{line}} mr-2"></i>
+                    <h4>{{text}}</h4>
+                </div>
+                {{/each}}
+
+            <div class="card border-0 mb-3">
+                <div class="row  justify-content-between align-items-center row-cols-2">
+                    <div class="col-12 col-md-6">
+                        <div class="card-body pb-0">
+                            <h2 class="card-title py-2 h1">Уважаемые клиенты</h2>
+                            <p class="card-text py-2">Наша компания на протяжении нескольких последних лет заслуженно является одним из ведущих производителей качественной тротуарной поитки дистрибьютеров. Мы будем рады ответить на все Ваши вопросы и предоставить максимально полезную для Вас информацию. Наше производство находтся в Подмосковье в городе Нахаино, рядом с Дедовское (Истра).</p>
+    
+                            <div class="card-text">
+                                <div class="flex-column">
+                                    <div class="alert text-white px-4 alert-danger mt-4" role="alert">
+                                        <h5>Ближайшие города от производства</h5>
+                                        <p>Истра, Дедовск, Нахабино, Красногорск, которые находятся на Волоколамском шоссе.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6  pb-5">
+                        <img src="assets/img/contacts/map.png" class="mx-auto d-block img-fluid " alt="map">
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 1280px;height: 420px" id="maplsk7nv39"></div>
+            <script>function YandexReadyHandlerlsk7nv39() {
+                var map = new ymaps.Map("maplsk7nv39", {
+                    center: [55.862287824999825, 37.175701573730365],
+                    zoom: 17,
+                    controls: ["zoomControl","typeSelector"],
+                    type: "yandex#map"
+                },{
+                    suppressMapOpenBlock: true
+                });
+                map.geoObjects.add(new ymaps.GeoObject({
+                    geometry: {
+                        type: "Point",
+                        coordinates: [55.86198161267493,37.175116852156044],
+                        hideIconOnBalloonOpen: false
+                    },
+                    properties: {
+                        balloonContent:decodeURIComponent(""),
+                        iconCaption:decodeURIComponent(""),
+                        hintCaption:decodeURIComponent(""),
+                    }
+                }, {
+                    preset: "islands#blueDotIcon",
+                })
+            );    return map;
+            }</script>
+            <script src="//api-maps.yandex.ru/2.1/?lang=ru&onload=YandexReadyHandlerlsk7nv39" type="text/javascript"></script>
+
+        </div>
+    </section>
