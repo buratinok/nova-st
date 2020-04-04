@@ -1,0 +1,52 @@
+<!-- Modal feedback-->
+<div class="modal fade" id="modalFeedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-feedback modal-dialog-centered" role="document">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="assets/img/modal-consultation/close.png" height="49" width="49"/>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card p-lg-4">
+                    <div class="card-text px-2">
+                        <h2 class="modal-title text-center" id="exampleModalCenterTitle">Заполните форму и мы
+                            с вами свяжемся!</h2>
+                        <p class="text-center">Введите контактные данные в форму ниже и наш менеджер свяжется с Вами в
+                            ближайшее время,
+                            чтобы
+                            ответить на все Ваши вопросы!</p>
+                    </div>
+                    <div class="card-body row position-relative justify-content-center">
+                        <div class="col-7">
+                            <form class="section-consultation__form">
+                                <div class="form-group position-relative">
+                                    <i class="user-icon position-absolute"></i>
+                                    <input type="text" class="form-control mt-4" id="exampleInputName"
+                                           placeholder="Имя">
+                                </div>
+                                <div class="form-group position-relative">
+                                    <i class="phone-icon position-absolute"></i>
+                                    <input type="text" class="form-control mt-4" id="exampleInputPhone"
+                                           placeholder="Телефон">
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 mt-4">Заказать звонок</button>
+
+
+                                <p class="text-center text-muted mt-4 mb-0">Нажимая на кнопку “Получит консультацию” вы
+                                    даёте согласие на обработку <a href="">
+                                        персональных данных
+                                    </a></p>
+                            </form>
+                        </div>
+                        <div class="col-3 position-absolute modall-feedback__image d-none d-lg-block">
+                            <img src="assets/img/modal-consultation/worker.png" class="mx-auto d-block img-fluid"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
