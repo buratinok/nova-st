@@ -21,5 +21,24 @@
             </div>
         </div>
 
+
     </div>
 </section>
+
+
+    <div class="row justify-content-center  d-md-none mx-3">
+        <h6 class="text-left">Галерея</h6>
+        <div class="swiper-container swiper-video w-100 h-100">
+            <div class="row swiper-wrapper  swiper-video__wrapper">
+                {{#repeat 20}}
+                <div class=" swiper-slide swiper-video__slide position-relative">
+                    <div class="card border-0 border-r0 position-absolute">
+                    <img class="img-fluid" src="assets/img/gallery-home.jpg"/>
+                    </div>
+                </div>
+                {{/repeat}}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>

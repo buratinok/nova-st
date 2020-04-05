@@ -14,6 +14,10 @@ const $carouselHeader = function () {
     var swiperVideo = new Swiper('.swiper-video', {
         slidesPerView: 4,
         slidesPerColumn: 2,
+        320: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+        },
         loop: true,
         centeredSlides: true,
         centeredSlidesBounds: true,
