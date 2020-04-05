@@ -71,6 +71,9 @@
     fill: $red3;
   }
 }
+.border-r20{
+  border-radius: rem-calc(20px);
+}
 
 @include media-breakpoint-down(sm) {
   .scroll-x {
