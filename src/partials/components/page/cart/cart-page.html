@@ -1,0 +1,38 @@
+<section class="section-cart py-5">
+    <div class="container-lg">
+        <h2 class="text-left">Корзина</h2>
+        <div class="row">
+            <div class="col scroll-x">
+                <table class="table table-borderless">
+                    <thead class="border-bottom">
+                    <tr>
+                        <th scope="col">Товар</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col">Цена за единицу</th>
+                        <th scope="col">Сумма</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#repeat 3}}
+                    <tr>
+                        <th scope="row">
+                            {{>product-card}}
+                        </th>
+                        <td> {{>plus-minus-card}}</td>
+                        <td> 499 &#8381;</td>
+                        <td> 499 &#8381;</td>
+                        <td><div class="btn btn-outline-danger border-0 border-r0"><i class="icon trash-icon"></i></div></td>
+                    </tr>
+                    {{/repeat}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{>form-cart}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -16,7 +16,6 @@ $increaseImages();
 $plusMinus();
 
 
-
 var $btnColour = document.querySelectorAll('.btn-colour');
 
 

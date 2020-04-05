@@ -1,0 +1,53 @@
+.section-cart {
+  table {
+    td {
+      vertical-align: middle;
+
+      .btn {
+        &:hover {
+          .trash-icon {
+            svg {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    .icon {
+      top: 75%;
+      right: 7%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .btn {
+    &:hover {
+      color: white;
+    }
+  }
+
+  .media {
+    &-body {
+      hr {
+        border: 2px dashed rgba(0, 0, 0, .1);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .section-cart {
+    table {
+      .card {
+        &-body {
+          margin: 0 -2rem;
+          /*width: 100%;*/
+          min-width: rem-calc(250px);
+        }
+      }
+    }
+  }
+}
