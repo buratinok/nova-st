@@ -15,8 +15,7 @@ const $carouselHeader = function () {
         slidesPerView: 4,
         slidesPerColumn: 2,
         320: {
-            slidesPerView: 1,
-            slidesPerColumn: 1,
+            slidesPerView: 2,
         },
         loop: true,
         centeredSlides: true,
