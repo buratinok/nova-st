@@ -5,10 +5,28 @@
     &-link {
       color: $dark;
 
+      &:hover {
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        color: $danger;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $danger;
+          top: 0;
+          left: 0;
+        }
+      }
+
       &.active {
         position: relative;
         background-color: transparent;
         color: $danger;
+
 
         &::before {
           content: '';
@@ -37,7 +55,7 @@
       box-shadow: 0 0 1px transparent;
       transition-duration: .3s;
       transition-property: transform;
-      transition-property: transform,-webkit-transform;
+      transition-property: transform, -webkit-transform;
 
       &:hover {
         cursor: pointer;

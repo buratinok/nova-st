@@ -1,0 +1,33 @@
+{$_modx->runSnippet('!mFilter2', [
+'element' => 'msProducts',
+'class' => 'msProduct',
+'showEmptyFilters' => false,
+'limit' => 6,
+'tplOuter' => '@FILE chunks/tpl_mfilter_outer.tpl',
+'tplPageWrapper' => '@INLINE <ul class="pagination justify-content-center align-items-center">{$prev}{$pages}{$next}</ul>',
+'tplPageActive' => '@INLINE <li class="page-item"><a class="page-link active" href="{$href}">{$pageNo}</a></li>',
+'tplPage' => '@INLINE <li class="page-item"><a class="page-link" href="{$href}">{$pageNo}</a></li>',
+'tplPagePrev' => '@INLINE <li class="page-item"><a class="control-swiper__prev btn btn-outline-dark p-4 position-relative mr-3" href="{$href}"><i class="arrow position-absolute center-block"></i></a></li>',
+'tplPageNext' => '@INLINE <li class="page-item"><a class="control-swiper__next btn btn-outline-dark p-4 position-relative mr-3" href="{$href}"><i class="arrow position-absolute center-block"></i></a></li>',
+'tplPagePrevEmpty' => '@INLINE <li class="page-item"><a class="control-swiper__prev btn btn-outline-dark p-4 position-relative mr-3" href="{$href}"><i class="arrow position-absolute center-block"></i></a></li>',
+'tplPageNextEmpty' => '@INLINE <li class="page-item"><a class="control-swiper__next btn btn-outline-dark p-4 position-relative mr-3" href="{$href}"><i class="arrow position-absolute center-block"></i></a></li>',
+'filters' => 'ms|price:number,
+            ms|vendor:vendors,
+            msoption|modeproduction:default,
+            msoption|shape:default,
+            msoption|thickness:default',
+'aliases' => 'ms|price==price,
+            ms|vendor==vendor,
+            msoption|modeproduction==modeproduction,
+            msoption|shape==shape,
+            msoption|thickness==thickness',
+'ajaxMode' => 'default',
+'filterOptions' => '{
+			"more_tpl": "<div class=\"text-center\"><button class=\"btn btn-blue btn-rounded btn_more\">Загрузить еще</button></div>"
+			}',
+'tpls' => '@FILE chunks/tpl_product.tpl',
+'tplFilter.outer.default' => '@FILE chunks/tpl_filter_outer.tpl',
+'tplFilter.row.default' => '@FILE chunks/tpl_filter_row.tpl',
+'tplFilter.outer.price' => '@FILE chunks/tpl_ filter_outer_price.tpl',
+'tplFilter.row.price' => '@FILE chunks/tpl_filter_row_price.tpl'
+])}

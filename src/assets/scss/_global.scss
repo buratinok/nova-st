@@ -81,7 +81,12 @@
     overflow-scrolling: touch;
   }
 }
-
+.lg-download{
+  display: none;
+}
+.lg-autoplay-button{
+  display: none;
+}
 .text-gray {
   color: rgba(0, 0, 0, 0.5)
 }

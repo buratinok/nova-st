@@ -289,6 +289,7 @@ const $iconSvg = function () {
         $('.play').html($play);
         $('.consultation').html($consultation);
         $('.user-icon').html($user);
+        $('.receiver-icon').html($user);
         $('.phone-icon').html($phone);
         $('.email-icon').html($email);
         $('.email2-icon').html($emailIcon);
