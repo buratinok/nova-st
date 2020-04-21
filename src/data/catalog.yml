@@ -35,3 +35,30 @@ catalog:
     title: ЖБИ изделия
     tab: concrete-products
     true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+  -
+    title: Ступени
+    tab: steps
+    true: true
+
+
+
