@@ -20,26 +20,8 @@
                     </div>
                     <div class="card-body row position-relative justify-content-center pt-0 pt-md-2">
                         <div class="col-12 col-md-7">
-                            <form class="section-consultation__form">
-                                <div class="form-group position-relative">
-                                    <i class="user-icon position-absolute"></i>
-                                    <input type="text" class="form-control mt-4" id="exampleInputName"
-                                           placeholder="Имя">
-                                </div>
-                                <div class="form-group position-relative">
-                                    <i class="phone-icon position-absolute"></i>
-                                    <input type="text" class="form-control mt-4" id="exampleInputPhone"
-                                           placeholder="Телефон">
-                                </div>
-                                <button type="submit" class="btn btn-warning w-100 mt-4">Заказать звонок</button>
-
-
-                                <p class="text-center text-muted mt-4 mb-0">Нажимая на кнопку “Получит консультацию” вы
-                                    даёте согласие на обработку <a href="">
-                                        персональных данных
-                                    </a></p>
-                            </form>
-                        </div>
+                            {insert 'file:chunks/base_form_feedback.tpl'}
+                            </div>
                         <div class="col-3 position-absolute modal-feedback__image d-none d-lg-block">
                             <img src="assets/templates/nova-st/img/modal-consultation/worker.png" class="mx-auto d-block img-fluid"/>
                         </div>
@@ -50,6 +32,7 @@
         </div>
     </div>
 </div>
+<!-- Modal feedback-->
 <!-- Modal Thanks-->
 <div class="modal fade" id="modalThanks" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
      aria-hidden="true">
@@ -139,25 +122,7 @@
                         </div>
                         <div class="card-body row position-relative justify-content-center pt-0 pt-md-2">
                             <div class="col-12">
-                                <form class="section-consultation__form">
-                                    <div class="form-group position-relative">
-                                        <i class="user-icon position-absolute"></i>
-                                        <input type="text" class="form-control mt-4" id="exampleInputName"
-                                               placeholder="ФИО">
-                                    </div>
-                                    <div class="form-group position-relative">
-                                        <i class="email-icon position-absolute"></i>
-                                        <input type="text" class="form-control mt-4" id="exampleInputPhone"
-                                               placeholder="Почта">
-                                    </div>
-                                    <button type="submit" class="btn btn-warning w-100 mt-4">Заказать звонок</button>
-
-
-                                    <p class="text-center text-muted mt-3 mb-0">Нажимая на кнопку “Получит консультацию” вы
-                                        даёте согласие на обработку <a href="">
-                                            персональных данных
-                                        </a></p>
-                                </form>
+                                {insert 'file:chunks/base_form_feedback.tpl'}
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@
                 {'ms2_cart_is_empty' | lexicon}
             </div>
             {else}
+
             <table class="table table-borderless">
                 <thead class="border-bottom">
 
@@ -45,30 +46,17 @@
                                                             class="float-right">{$product.quantity[0] | htmlent} штук</span>
                                                 </li>
                                                 {/if}
-                                                <li class="fonts-size-12 mt-1"><span>Цвета:</span><span
+                                                <li class="fonts-size-12 mt-1"><span>Цвет:</span><span
                                                             class="float-right">
-                                                    <ul class="list-inline mb-0 colours-wrapper">
-                                                     <li class="list-inline-item m-0">
-                                                         <label for="colour_Grey" style="background-color: #C7C7C7"
-                                                                class="btn-colour border-r50 p-2"> </label>
-                                                         <input type="checkbox" name="colour" value="value_Grey"
-                                                                id="colour_Grey"
-                                                                class="invisible">
-                                                     </li>
-                                                     <li class="list-inline-item m-0">
-                                                         <label for="colour_Orang" style="background-color: #E97A5A"
-                                                                class="btn-colour border-r50 p-2"> </label>
-                                                         <input type="checkbox" name="colour" value="value_Orang"
-                                                                id="colour_Orang"
-                                                                class="invisible">
-                                                     </li>
-                                                     <li class="list-inline-item m-0">
-                                                         <label for="colour_Red" style="background-color: #B61320"
-                                                                class="btn-colour border-r50 p-2"> </label>
-                                                         <input type="checkbox" name="colour" value="value_Red"
-                                                                id="colour_Red"
-                                                                class="invisible">
-                                                     </li>
+
+                                                    <ul class="list-inline mb-0 colours-wrapper ">
+
+                                                         <!--colors-->
+                                                          <li class="list-inline-item m-0">
+                                                               <label for="colour" style="background-color: #{$product["option.color"]}" class="btn-colour border-r50 p-2"> </label>
+                                                                <input type="hidden" name="options[colour]" value="#{$product["option.color"]}" id="colour"
+                                                                       class="inut-invisible">
+                                                            </li> <!--/colors-->
                                                  </ul>
                                                 </span>
                                                 </li>
@@ -79,19 +67,15 @@
                         </th>
                         <td class="count">
                             <form method="post" class="ms2_form" role="form">
-                                <input type="hidden" name="key" value="{$product.key}"/>
+                                <input type="hidden" name="key" value="{$product.key}">
                                 <div class="btn-group quantity buttons_added border">
-                                    {*<input class="btn button-minus border-r0 text-gray d-none d-md-block"
-                                           type="button" value="-" data-field="count"/>*}
-                                    <input type="number" step="1" min="1" max="" value="{$product.count}"
-                                           name="count"
-                                           class="text-center border-0 input-text quantity-field qty text form-control"
-                                           size="4"
-                                           pattern=""
-                                           inputmode=""/>
-                                    {*<input class="btn button-plus border-r0 text-gray d-none d-md-block"
-                                           type="button" value="+" data-field="count"/>*}
-
+                                        <button type="submit" class="btn button-minus border-r0 text-gray d-block" data-field="count" name="ms2_action" value="cart/change">
+                                            - </button>
+                                            <input type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number" 
+                                               class="text-center border-0 input-text quantity-field qty text form-control" size="4" pattern="" inputmode="">
+                                        <button type="submit" class="btn button-plus border-r0 text-gray d-block" data-field="count" name="ms2_action" value="cart/change">
+                                            +
+                                        </button>
                                 </div>
                                 <button class="btn btn-sm" type="submit" name="ms2_action" value="cart/change">&#8635;</button>
                             </form>
@@ -107,6 +91,21 @@
                         </td>
                     </tr>
                 {/foreach}
+                <tr class="footer">
+                    <th class="total">{'ms2_cart_total' | lexicon}:</th>
+                    <th class="total_count">
+                        <span class="ms2_total_count">{$total.count}</span>
+                        {'ms2_frontend_count_unit' | lexicon}
+                    </th>
+                    <th class="total_weight text-nowrap">
+                        <span class="ms2_total_weight">{$total.weight}</span>
+                        {'ms2_frontend_weight_unit' | lexicon}
+                    </th>
+                    <th class="total_cost text-nowrap" colspan="2">
+                        <span class="ms2_total_cost">{$total.cost}</span>
+                        {'ms2_frontend_currency' | lexicon}
+                    </th>
+                </tr>
                 </tbody>
             </table>
             {/if}

@@ -22,10 +22,25 @@
 
     .image {
       width: 100%;
-      
+      max-height: 202px;
+      overflow: hidden;
+
       &:hover img {
         cursor: pointer;
       }
   
     }
+}
+
+@include media-breakpoint-down(xs) {
+  .section-gallery{
+
+
+    .image {
+      width: 100%;
+      max-height: 111px;
+      overflow: hidden;
+
+    }
+  }
 }

@@ -46,6 +46,15 @@
       color: white;
     }
   }
+
+  .colours-wrapper {
+    .invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
