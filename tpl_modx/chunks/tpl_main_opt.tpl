@@ -1,5 +1,5 @@
 
-    <li class="fonts-size-14 mt-2"><span>{$options.quantity.caption}:</span><span
+    <li class="fonts-size-14 mt-2"><span>{$options.quantity.caption}</span><span
                 class="float-right font-weight-bold fonts-size-14">
                 {if $options.quantity.value is array}
                     {$options.quantity.value | join : ", "}

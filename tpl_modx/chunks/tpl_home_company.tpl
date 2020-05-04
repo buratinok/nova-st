@@ -1,4 +1,5 @@
 
+
 {set $rows = json_decode($_pls['tv.ourquality'])}
 {if $rows}
     {foreach $rows as $key => $row}

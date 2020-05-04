@@ -16,6 +16,7 @@
 {include 'file:chunks/base_modal.tpl'}
 <!-- Scripts-->
 {include 'file:chunks/base_scripts.tpl'}
+{include 'file:chunks/base_download_price.tpl'}
 
 </body>
 </html>

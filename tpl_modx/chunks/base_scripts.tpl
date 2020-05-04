@@ -6,3 +6,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.js"></script>
 <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="assets/templates/nova-st/js/app.js"></script>
+<script src="assets/templates/nova-st/js/main.js"></script>
+

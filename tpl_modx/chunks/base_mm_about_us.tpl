@@ -14,7 +14,7 @@
                     <div class="col-12 col-md-6">
                         <div class="card-body p-0">
                             <h3 class="card-title pt-3 pt-md-0">[[+title]]</h3>
-                            <p class="card-text">[[+description]]</p>
+                            <p class="card-text mb-3 mb-md-0">[[+description]]</p>
                         </div>
                     </div>',
     'ajaxMode' => 'default',

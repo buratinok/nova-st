@@ -1,9 +1,9 @@
 {$_modx->runSnippet('!pdoResources', [
 'parents' => '0',
 'resources' => '76',
-'limit'=> '4',
+'depth' => '0',
 'tpl' => '@FILE chunks/tpl_home_company.tpl',
-'toPlaceholder' => 'resultс',
+'toPlaceholder' => 'res',
 'includeTVs' => 'ourquality',
 'processTVs' => '1'
 ])}

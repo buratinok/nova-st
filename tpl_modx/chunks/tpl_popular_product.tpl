@@ -1,3 +1,6 @@
+{*<pre>
+{$id | var_dump}
+</pre>*}
 
 <div class="col mb-0 mb-sm-3 py-1 py-sm-0 px-1 px-sm-2">
     <div class="card border-r0 h-100">
@@ -17,19 +20,12 @@
                             class="fire-icon mr-1"></i>Новинки</span>
             {/if}
         </div>
-        {if $image}
         <figure class="figure">
             <a href="{$id | url}">
-            <img class="mx-auto d-block img-fluid" src="{$image}" alt="{$pagetitle | htmlent}" style="max-height: 150px; min-height: 150px; ">
+            <img class="mx-auto d-block img-fluid" src="{$id | resource : 'image'}" alt="{$pagetitle | htmlent}" style="max-height: 150px; min-height: 150px; ">
             </a>
         </figure>
-        {else}
-        <figure class="figure">
-            <a href="{$id | url}">
-            <img class="mx-auto img-fluid d-block" src="{'+conf_noimage' | placeholder}" alt="{$pagetitle | htmlent}">
-            </a>
-        </figure>
-        {/if}
+        
         <div class="card-body py-0">
             <h6 class="card-title mb-3">{$pagetitle | htmlent}</h6>
             <ul class="list-unstyled">
@@ -69,21 +65,8 @@
                     <form action="#" method="post" class="ms2_form d-flex flex-column align-items-center">
                         <input type="hidden" name="id" value="{$id}">
                         <input type="hidden" name="count" value="1">
-
-                        {set $countc = $_modx->runSnippet("msOptionsColor",[
-                        "options" => "color",
-                        'product' => $id,
-                        'return' => 'data'
-                        ])}
-                        {foreach $countc as $key => $coun}
-
-                        {set $quantity = $coun | count}
-                            {if $quantity > 1}
-                                <a href="{$id | url}" class="btn btn-danger text-white fonts-size-14 mt-2">Просмотреть</a>
-                            {else}
-                                <button type="submit" name="ms2_action" value="cart/add" class="btn btn-outline-danger fonts-size-14 px-4">В корзину</button>
-                            {/if}
-                        {/foreach}
+                        <button type="submit" name="ms2_action" value="cart/add" class="btn btn-outline-danger fonts-size-14 px-4">В корзину</button>
+                        <a href="{$id | url}" class="btn btn-danger text-white fonts-size-14 mt-2">Просмотреть</a>
                     </form>
             </div>
         </div>

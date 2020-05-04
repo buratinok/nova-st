@@ -20,7 +20,9 @@
                 </thead>
                 <tbody>
                 {foreach $products as $product}
-                    <tr id="$product.key">
+                <pre>
+                     {$products | var_dump}</pre>
+                    <tr id="{$product.key}">
                         <th scope="row">
                             <div class="card flex-row border-0">
                                 <div class="col-3 d-none d-md-block">
@@ -50,13 +52,20 @@
                                                             class="float-right">
 
                                                     <ul class="list-inline mb-0 colours-wrapper ">
-
+                                                           {set $modopt = $product["options"]}  
+               
+                                                              {foreach $modopt as $mod}
+                                                              {set $rows = json_decode($mod, true)}
+                                                              {if $rows}
+                                                                
                                                          <!--colors-->
                                                           <li class="list-inline-item m-0">
-                                                               <label for="colour" style="background-color: #{$product["option.color"]}" class="btn-colour border-r50 p-2"> </label>
-                                                                <input type="hidden" name="options[colour]" value="#{$product["option.color"]}" id="colour"
+                                                               <label for="colour" style="background-color: {$rows['background-color']}" class="btn-colour border-r50 p-2"> </label>
+                                                                <input type="hidden" name="options[colour]" value="{$rows['color']}" id="colour"
                                                                        class="inut-invisible">
                                                             </li> <!--/colors-->
+                                                       {/if}
+                                                    {/foreach}      
                                                  </ul>
                                                 </span>
                                                 </li>
@@ -66,22 +75,37 @@
                             </div>
                         </th>
                         <td class="count">
+                            <!--class="ms2_form"-->
                             <form method="post" class="ms2_form" role="form">
                                 <input type="hidden" name="key" value="{$product.key}">
-                                <div class="btn-group quantity buttons_added border">
-                                        <button type="submit" class="btn button-minus border-r0 text-gray d-block" data-field="count" name="ms2_action" value="cart/change">
+                                <input class="price" type="hidden" name="price" value="{$rows['price']}">
+                                
+                                
+                                
+                                <div class="btn-group quantity buttons_added border le-quantity">
+                                        <button type="submit" class="btn button-minus border-r0 text-gray d-block"  name="ms2_action" value="cart/change">
                                             - </button>
-                                            <input type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number" 
-                                               class="text-center border-0 input-text quantity-field qty text form-control" size="4" pattern="" inputmode="">
-                                        <button type="submit" class="btn button-plus border-r0 text-gray d-block" data-field="count" name="ms2_action" value="cart/change">
+                                            <input {*onchange ="formEditCount(this, {$product.key}, {$product.price})"*} type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number" 
+                                               class="text-center border-0 input-text quantity-field qty text form-control counter" size="4" pattern="" inputmode="">
+                                        <button type="submit" class="btn button-plus border-r0 text-gray d-block"  name="ms2_action" value="cart/change"
+                                        >
                                             +
                                         </button>
                                 </div>
                                 <button class="btn btn-sm" type="submit" name="ms2_action" value="cart/change">&#8635;</button>
                             </form>
                         </td>
-                        <td> {$product.price} &#8381;</td>
-                        <td>  {$total.cost}&#8381;</td>
+                        <td> {set $modopt = $product["options"]}  
+                       
+               
+                                                              {foreach $modopt as $mod}
+                                                              {set $rows = json_decode($mod, true)}
+                                                              {if $rows}
+                                                                {$rows['price']}
+                                                                {/if}
+                                                    {/foreach} {$_modx->lexicon('ms2_frontend_currency')}   
+                                                                </td>
+                        <td class="cost" > {$product.cost} {$_modx->lexicon('ms2_frontend_currency')}</td>
                         <td class="remove">
                             <form method="post"  class="ms2_form">
                                 <input type="hidden" name="key" value="{$product.key}">
@@ -90,6 +114,7 @@
                             </form>
                         </td>
                     </tr>
+                 
                 {/foreach}
                 <tr class="footer">
                     <th class="total">{'ms2_cart_total' | lexicon}:</th>
@@ -98,8 +123,7 @@
                         {'ms2_frontend_count_unit' | lexicon}
                     </th>
                     <th class="total_weight text-nowrap">
-                        <span class="ms2_total_weight">{$total.weight}</span>
-                        {'ms2_frontend_weight_unit' | lexicon}
+                        
                     </th>
                     <th class="total_cost text-nowrap" colspan="2">
                         <span class="ms2_total_cost">{$total.cost}</span>
@@ -121,3 +145,7 @@
             ])}
         </div>
     </div>
+    
+    
+
+

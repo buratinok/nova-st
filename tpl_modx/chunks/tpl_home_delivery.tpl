@@ -1,5 +1,5 @@
 
-{set $rows = json_decode({$_pls['tv.delivery']})}
+{set $rows = json_decode($_pls['tv.delivery'])}
 {if $rows}
     {foreach $rows as $key => $row}
         <div class="col mt-4">

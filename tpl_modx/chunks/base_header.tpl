@@ -3,11 +3,7 @@
         <div class="container-fluid container-xl">
             <div class="row row-cols-2 justify-content-between align-items-center w-100">
                 <div class="col-10 col-sm-5 col-md-auto brand d-flex align-items-center">
-                    <a class="navbar-brand" href="{$_modx->config.site_url}">
-                        <h1 class="text-hide" style="background-image: url('{'+logo_image' | placeholder}');">
-                            {$_modx->config.name}
-                        </h1>
-                    </a>
+                    <a class="navbar-brand" href="{$_modx->config.site_url}"><img src="{'+logo_image' | placeholder}" alt="{$_modx->config.name}"></a>
                     <p class="navbar-top__title m-0">Завод бетонных изделий</p>
                 </div>
                 <!-- Button trigger modal feedback-->
@@ -70,7 +66,7 @@
         </ul>
         <div class="container-fluid container-xl">
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                {$_modx->runSnippet("pdoMenu", [
+                {$_modx->runSnippet("!pdoMenu", [
                 "parents" => 0,
                 "level" => 2,
                 'tplOuter' => '@INLINE <ul class="nav nav-pills nav-fill align-items-baseline align-items-md-center">{$wrapper}</ul>',
