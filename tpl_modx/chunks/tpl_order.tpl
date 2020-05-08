@@ -73,9 +73,16 @@
         <img src="assets/templates/nova-st/img/weights.png"
              class="mb-3 mb-md-auto mx-auto img-fluid d-block"/>
         <div class="media-body col-12 col-md-6 bg-secondary p-5">
-            <h5 class="mt-3">Сумма: <span class="float-right">{$order.cost} &#8381;</span></h5>
+            <h5 class="mt-3">Вес: <span class="float-right">
+                        {$total | var_dump}
+                        <span class="ms2_total_weight">{$total.weight ?  : $order.weight}</span>
+                        {'ms2_frontend_weight_unit' | lexicon}
+                    </span>
+            </h5>
             <hr>
-            <h4 class="mt-3">Всего: <span class="float-right">{$order.cost} &#8381;</span></h4>
+            <h4 class="mt-3">Всего: <span class="float-right"><span id="ms2_order_cost">{$order.cost ?: 0}</span>
+                        {'ms2_frontend_currency' | lexicon}
+                    </span></span></h4>
         </div>
     </div>
     <button type="submit" name="ms2_action" value="order/submit"
