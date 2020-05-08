@@ -130,6 +130,10 @@
   grid-column-gap: 1.25rem;
   column-gap: 1.25rem;
 }
-.msearch2{
-  height: 100vh;
+
+.focus-none {
+  &:focus{
+    outline: none;
+    box-shadow: none;
+    }
 }
