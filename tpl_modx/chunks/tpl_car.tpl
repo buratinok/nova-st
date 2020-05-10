@@ -86,11 +86,11 @@
                                 
                                 
                                 <div class="btn-group quantity buttons_added border le-quantity">
-                                        <button type="submit" class="btn button-minus border-r0 text-gray d-block focus-none"  name="ms2_action" value="cart/change">
+                                        <button type="submit" class="btn button-minus border-r0 text-gray d-block"  name="ms2_action" value="cart/change">
                                             - </button>
-                                            <input type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number" style="width: 100px;"
-                                               class="text-center border-0 input-text quantity-field qty text form-control focus-none counter" size="4" pattern="" inputmode="">
-                                        <button type="submit" class="btn button-plus border-r0 text-gray d-block focus-none"  name="ms2_action" value="cart/change"
+                                            <input type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number"
+                                               class="text-center border-0 input-text quantity-field qty text form-control counter" size="4" pattern="" inputmode="">
+                                        <button type="submit" class="btn button-plus border-r0 text-gray d-block"  name="ms2_action" value="cart/change"
                                         >
                                             +
                                         </button>
@@ -138,9 +138,9 @@
             {$_modx->runSnippet("!msOrder",[
                     'tpl' => '@FILE chunks/tpl_order.tpl'
             ])}
-          {* {$_modx->runSnippet("!msGetOrder",[
+            {$_modx->runSnippet("!msGetOrder",[
             'tpl' => '@FILE chunks/tpl_getorder.tpl'
-            ])}*}
+            ])}
         </div>
     </div>
 

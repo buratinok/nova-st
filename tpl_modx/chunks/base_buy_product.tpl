@@ -12,7 +12,6 @@
     'parents' => $item.id,
     'limit'=>'4',
     'sortby'=> 'RAND()',
-    'where'=>'{"Data.new:=":"1"}',
     'tpl' => '@FILE chunks/tpl_product.tpl'
     ])}
 {/foreach}

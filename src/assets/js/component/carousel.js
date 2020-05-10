@@ -47,6 +47,10 @@ const $carouselHeader = function () {
         thumbs: {
             swiper: galleryThumbs,
         },
+        navigation: {
+            nextEl: '.control-product__next',
+            prevEl: '.control-product__prev',
+        },
     });
 
     /*карусель страницы продуктов укладка*/
