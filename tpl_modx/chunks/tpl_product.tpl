@@ -1,5 +1,5 @@
 
-<div class="col mb-0 mb-sm-3 py-1 py-sm-0 px-1 px-sm-2">
+<div class="col-6 col-sm-4 col-md-3 mb-0 mb-sm-3 py-1 py-sm-0 px-1 px-sm-2">
     <div class="card border-r0 h-100">
         <div class="position-absolute py-3 d-flex flex-column z-2">
             {if $old_price>0}
