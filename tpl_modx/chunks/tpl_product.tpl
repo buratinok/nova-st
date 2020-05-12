@@ -1,4 +1,3 @@
-
 <div class="col-6 col-sm-4 col-md-3 mb-0 mb-sm-3 py-sm-0 px-sm-2" style="min-height: 368px;">
     <div class="card border-r0 h-100" >
         <div class="position-absolute py-3 d-flex flex-column z-2">
@@ -44,7 +43,7 @@
                     'product' => $id,
                     'tpl' => '@FILE chunks/tpl_main_opt.tpl'
                 ])}
-                <!--colors-->
+
 
                 {$_modx->runSnippet("msOptionsColor",[
                 "options" => "color",
@@ -52,7 +51,7 @@
                 'product' => $id,
                 "tpl" => "@FILE chunks/tpl_colors_category.tpl"
                 ])}
-                <!--/colors-->
+
             </ul>
         </div>
         <div class="card-body pt-0 d-flex align-items-end">

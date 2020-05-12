@@ -32,26 +32,26 @@ const $carouselHeader = function () {
         slidesPerView: 2,
         loop: true,
         freeMode: true,
-        loopedSlides: 2, //looped slides should be the same
+        loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        navigation: {
-            nextEl: '.control-product__next',
-            prevEl: '.control-product__prev',
-        },
     });
     var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,
+        autoplay: {
+            delay: 2000,
+        },
         loop:true,
-        loopedSlides: 2, //looped slides should be the same
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.control-product__next ',
+            prevEl: '.control-product__prev',
+        },
         thumbs: {
             swiper: galleryThumbs,
         },
-        navigation: {
-            nextEl: '.control-product__next',
-            prevEl: '.control-product__prev',
-        },
     });
+
 
     /*карусель страницы продуктов укладка*/
 
