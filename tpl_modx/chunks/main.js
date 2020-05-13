@@ -31,9 +31,8 @@ $(document).ready(function () {
             var $trPrice = $(this).find('input.price').val();
             var $trCounter = $(this).find('input.counter').val();
             var $trCost = $tr.find('.cost');
-
             //cost calculation
-            var $priceCost = $trPrice * $trCounter;
+            var $priceCost = parseFloat($trPrice.replace(",",".").replace(/[^0-9.]/gim, "")) * $trCounter;
 
             //data output
             $trCost.html($priceCost);
@@ -58,21 +57,6 @@ $(document).ready(function () {
 
      //Add active class
      $(this).find('label').addClass('active');
-
-   /*  //Add checked
-     $(this).find('input').prop('checked', true);
-
-     //get attrs of price
-     var _input = $(this).find('input').val();
-
-     //obj from JSON(str)
-     _input = JSON.parse(_input);
-
-     //change price in tag
-     $('.msoptionsprice-cost', document).html(_input.price);*/
-
-     //cancel 2 events
-    /* return false;*/
 
  })
 
