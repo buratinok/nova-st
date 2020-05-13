@@ -12,8 +12,8 @@
 
                 <tr>
                     <th scope="col">Товар</th>
-                    <th scope="col">Количество</th>
-                    <th scope="col">Цена за единицу</th>
+                    <th scope="col" class="text-center">Количество</th>
+                    <th scope="col" class="text-center">Цена за единицу</th>
                     <th scope="col">Сумма</th>
                     <th scope="col"></th>
                 </tr>
@@ -23,7 +23,7 @@
                {* <pre>
                      {$products | var_dump}</pre>*}
                     <tr id="{$product.key}">
-                        <th scope="row">
+                        <th scope="row" style="width: 480px">
                             <div class="card flex-row border-0">
                                 <div class="col-3 d-none d-md-block">
                                     {if $product.image}
@@ -39,45 +39,55 @@
                                         <a href="{$product.id | url}"
                                            class="h6 card-title stretched-link mb-3">{$product.article | htmlent}-{$product.pagetitle | htmlent}</a>
 
-                                            <ul class="list-unstyled">
+                                        <ul class="list-unstyled">
+                                            {if $product.size[0]}
                                                 <li class="fonts-size-12 mt-1"><span>Размер:</span><span
                                                             class="float-right">{$product.size[0] | htmlent}</span>
                                                 </li>
-                                                {if $product.quantity[0] }
+                                            {/if}
+                                            
+                                            {if $product.quantity[0]}
                                                 <li class="fonts-size-12 mt-1"><span>Штук в м2:</span><span
                                                             class="float-right">{$product.quantity[0] | htmlent} штук</span>
                                                 </li>
+                                            {/if}
+                                            
+                                            <!--colors-->
+                                            <li class="fonts-size-12 mt-1">
+                                                {set $modopt = $_modx->runSnippet("!msOptionsColor",[
+                                                    "options" => "color",
+                                                    'tpl' => "@FILE chunks/tpl_colors.tpl",
+                                                    'product' => $product.id,
+                                                    'byOptions' => json_encode($product.options),
+                                                    'toPlaceholder' => 'result',
+                                                    'return' => 'data'
+                                                    ])}
+                                                    
+                                                {if $modopt}
+                                                <span>Цвет:</span>
                                                 {/if}
-                                                <li class="fonts-size-12 mt-1"><span>Цвет:</span><span
-                                                            class="float-right">
-
+                                                
+                                                <span class="float-right">
                                                     <ul class="list-inline mb-0 colours-wrapper ">
-                                                        {set $modopt = $_modx->runSnippet("!msOptionsColor",["options" => "color",
-                                                        'tpl' => "@FILE chunks/tpl_colors.tpl",
-                                                        'product' => $product.id,
-                                                        'byOptions' => json_encode($product.options),
-                                                        'toPlaceholder' => 'result',
-                                                        'return' => 'data'
-                                                        ])}
-                                                              {foreach $modopt as $row}
-                                                              {if $row}
-                                                         <!--colors-->
-                                                          <li class="list-inline-item m-0">
-                                                               <label for="colour" style="background-color:#{$row["color"]}" class="btn-colour border-r50 p-2"> </label>
-                                                                <input type="hidden" name="options[colour]" value="{$row["value"]}" id="colour"
-                                                                       class="inut-invisible">
-                                                            </li> <!--/colors-->
-                                                       {/if}
-                                                    {/foreach}      
-                                                 </ul>
+                                                        
+                                                        {foreach $modopt as $row}
+                                                            {if $row}
+                                                                <li class="list-inline-item m-0">
+                                                                    <label for="colour" style="background-color:#{$row["color"]}" class="btn-colour border-r50 p-2"> </label>
+                                                                    <input type="hidden" name="options[colour]" value="{$row["value"]}" id="colour"
+                                                                           class="inut-invisible">
+                                                                </li> <!--/colors-->
+                                                            {/if}
+                                                        {/foreach}      
+                                                    </ul>
                                                 </span>
-                                                </li>
-                                            </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </th>
-                        <td class="count">
+                        <td class="count text-center">
                             <!--class="ms2_form"-->
                             <form method="post" class="ms2_form" role="form">
                                 <input type="hidden" name="key" value="{$product.key}">
@@ -98,12 +108,12 @@
                                 <button class="btn btn-sm" type="submit" name="ms2_action" value="cart/change">&#8635;</button>
                             </form>
                         </td>
-                        <td class="price"><span class="mr-2 text-nowrap">{$product.price}</span>{'ms2_frontend_currency' | lexicon}
+                        <td class="price text-center"><span class="text-nowrap">{$product.price}</span> {'ms2_frontend_currency' | lexicon}
                             {if $product.old_price}
-                                <span class="old_price text-nowrap">{$product.old_price}</span>{'ms2_frontend_currency' | lexicon}
+                                <span class="old_price text-nowrap">{$product.old_price}</span> {'ms2_frontend_currency' | lexicon}
                             {/if}</td>
-                        <td>
-                           <span class="cost">{$product.cost}</span>{$_modx->lexicon('ms2_frontend_currency')}</td>
+                        <td class="px-0" style="width: 100px">
+                           <span class="cost">{$product.cost}</span> {$_modx->lexicon('ms2_frontend_currency')}</td>
                         <td class="remove">
                             <form method="post"  class="ms2_form">
                                 <input type="hidden" name="key" value="{$product.key}">
@@ -116,14 +126,14 @@
                 {/foreach}
                 <tr class="footer">
                     <th class="total">{'ms2_cart_total' | lexicon}:</th>
-                    <th class="total_count">
+                    <th class="total_count text-center">
                         <span class="ms2_total_count">{$total.count}</span>
                         {'ms2_frontend_count_unit' | lexicon}
                     </th>
                     <th class="total_weight text-nowrap">
                         <input type="hidden" value="{$total.weight}">
                     </th>
-                    <th class="total_cost text-nowrap" colspan="2">
+                    <th class="total_cost text-nowrap pl-0" colspan="2">
                         <span class="ms2_total_cost">{$total.cost}</span>
                         {'ms2_frontend_currency' | lexicon}
                     </th>
@@ -138,9 +148,6 @@
             {$_modx->runSnippet("!msOrder",[
                     'tpl' => '@FILE chunks/tpl_order.tpl'
             ])}
-          {* {$_modx->runSnippet("!msGetOrder",[
-            'tpl' => '@FILE chunks/tpl_getorder.tpl'
-            ])}*}
         </div>
     </div>
 

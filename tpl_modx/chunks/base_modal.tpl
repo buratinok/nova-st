@@ -51,10 +51,10 @@
                     </div>
                     <ul class="nav justify-content-center align-items-center">
                         <li class="nav-item">
-                            <a class="h5 nav-link active text-dark font-weight-bold" href="#"><u>На главную</u></a>
+                            <a class="h5 nav-link active text-dark font-weight-bold" href="{'1' | url}"><u>На главную</u></a>
                         </li>
                         <li class="nav-item">
-                            <a class="h5 nav-link text-dark font-weight-bold" href="#"><u>В каталог</u></a>
+                            <a class="h5 nav-link text-dark font-weight-bold" href="{'3' | url}"><u>В каталог</u></a>
                         </li>
                     </ul>
                     <div class="card-body row position-relative justify-content-center pt-5">
@@ -73,16 +73,16 @@
                         <h6 class="text-center mb-0 fonts-size-12">Мы в соцсетях</h6>
                         <ul class="list-unstyled d-flex justify-content-center mt-4 w-100">
                             <li class="ml-1">
-                                <a href="/">
+                                <a href="{'+vk' | placeholder}">
                                     <img src="assets/templates/nova-st/img/footer/vk .png" height="26" width="25"/>
                                 </a></li>
                             <li class="ml-1">
-                                <a href="/">
+                                <a href="{'+instagram' | placeholder}">
                                     <img src="assets/templates/nova-st/img/footer/instagram.png" height="26" width="25"/>
                                 </a>
                             </li>
                             <li class="ml-1">
-                                <a href="/">
+                                <a href="{'+facebook' | placeholder}">
                                     <img src="assets/templates/nova-st/img/footer/facebook.png" height="26" width="25"/>
                                 </a>
                             </li>

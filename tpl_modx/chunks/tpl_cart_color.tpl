@@ -16,7 +16,7 @@
                     background-color:#{$optionsc.color};
                     margin-bottom: 0;
                     border-radius: 50%;
-                    box-shadow: inset 0 0 0 5px #fff, 0 0 0 1px #ced4da;
+                    box-shadow: inset 0 0 0 2px #fff, 0 0 0 1px #ced4da;
                     background-position: center;
                     background-size: cover;
                     cursor: pointer;"> </label>

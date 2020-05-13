@@ -1,6 +1,6 @@
 {if $files}
     {foreach $files as $file}
-        <div class="swiper-slide"><img src="{$file['url']}" alt="{$modx->resource->pagetitle | htmlent}"
+        <div class="swiper-slide mx-2"><img class="img-fluid" src="{$file['url']}" alt="{$modx->resource->pagetitle | htmlent}"
                                        style="height: 70px;"></div>
     {/foreach}
 {else}

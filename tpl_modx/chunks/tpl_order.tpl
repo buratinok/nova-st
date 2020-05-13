@@ -49,7 +49,7 @@
         <fieldset class="form-group justify-content-md-between col-auto">
             <legend class="h5 text-left pt-0">{'ms2_frontend_payments' | lexicon}:</legend>
             <div class="row">
-                <div class="col d-flex flex-row">
+                <div class="col d-flex flex-column flex-md-row">
                     {foreach $payments as $payment index=$index}
 
                         {var $checked = !$order.payment && $index == 0 || $payment.id == $order.payment}
@@ -73,7 +73,7 @@
         <img src="assets/templates/nova-st/img/weights.png"
              class="mb-3 mb-md-auto mx-auto img-fluid d-block"/>
         <div class="media-body col-12 col-md-6 bg-secondary p-5">
-            <h5 class="mt-3">Вес: <span class="float-right">{$order.num}
+            <h5 class="mt-3">Вес: <span class="float-right">
                         <span class="ms2_total_weight">{$total.weight}</span>
                         {'ms2_frontend_weight_unit' | lexicon}
                     </span>

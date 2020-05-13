@@ -21,11 +21,13 @@
 </svg></i></div></a>'
 'filters' => 'ms|price:number,
             ms|vendor:vendors,
+            msoption|quantity:default,
             msoption|modeproduction:default,
             msoption|shape:default,
             msoption|thickness:default',
 'aliases' => 'ms|price==price,
             ms|vendor==vendor,
+            msoption|quantity==quantity,
             msoption|modeproduction==modeproduction,
             msoption|shape==shape,
             msoption|thickness==thickness',
@@ -36,6 +38,6 @@
 'tpls' => '@FILE chunks/tpl_product.tpl',
 'tplFilter.outer.default' => '@FILE chunks/tpl_filter_outer.tpl',
 'tplFilter.row.default' => '@FILE chunks/tpl_filter_row.tpl',
-'tplFilter.outer.price' => '@FILE chunks/tpl_ filter_outer_price.tpl',
+'tplFilter.outer.price' => '@FILE chunks/tpl_filter_outer_price.tpl',
 'tplFilter.row.price' => '@FILE chunks/tpl_filter_row_price.tpl'
 ])}

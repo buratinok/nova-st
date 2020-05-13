@@ -1,5 +1,5 @@
 <!--footer-->
-<footer class="footer bg-dark pt-5 py-md-5">
+<footer class="footer bg-dark pt-5 pt-md-5">
     <div class="container-fluid container-xl">
         <div class="row">
             <div class="col-auto">
@@ -60,7 +60,7 @@
             <div class="col-lg-6">
                 <div class="card border-0 border-r0 bg-transparent">
                     <div class="row no-gutters">
-                        <div class="col-md-7 pr-3">
+                        <div class="col-md-6 pr-3">
                             <div class="card-body d-sm-flex flex-md-column align-items-end justify-content-between px-0 p-md-0">
                                 <div class="media ml-3">
                                     <h6 class="fas fa-map-marker-alt m-0 text-muted"></h6>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             {if '+map' | placeholder }
                             <div style="width: 100%">
                                 {'+map' | placeholder}
@@ -101,5 +101,13 @@
                     </div>
                 </div>            </div>
         </div>
+        <div class="row">
+            <div class="col py-3 d-flex justify-content-between">
+                <p class="mb-1 text-center text-white fonts-size-12">© {'' | date : 'Y'} - Нова Строй </p>
+                <p class="mb-1 text-center text-white fonts-size-12">{'+text-footer' | placeholder}</p>
+             </div>
+        </div>
     </div>
 </footer>
+
+{$_modx->getChunk('YD')}

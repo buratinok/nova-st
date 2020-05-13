@@ -4,10 +4,10 @@
             <div class="row row-cols-2 justify-content-between align-items-center w-100">
                 <div class="col-10 col-sm-5 col-md-auto brand d-flex align-items-center">
                     <a class="navbar-brand" href="{$_modx->config.site_url}"><img src="{'+logo_image' | placeholder}" alt="{$_modx->config.name}"></a>
-                    <p class="navbar-top__title m-0">Завод бетонных изделий</p>
+                    <h1 class="h6 navbar-top__title m-0">Завод бетонных изделий</h1>
                 </div>
-                <!-- Button trigger modal feedback-->
-                <a href="tel:74953747061" class="col-1 d-md-none">
+                <!-- Button trigger modal feedback whatsup-->
+                <a href="https://wa.me/{'+whatsup' | placeholder}?text=Здравствуйте.%20Вопрос%20по%20поводу%20плитки." class="col-1 d-md-none" terget="_blank">
                     <i class="order-call-icon"></i>
                 </a>
 
@@ -27,7 +27,8 @@
                         <div class="media-body media-body__contact ml-3">
                             {if '+phone1' | placeholder }
                             <h5 class="m-0 font-weight-bold">+{'+phone1' | placeholder}</h5>
-                            <a href="tel:{'+phone1' | placeholder}" class="text-dark">
+                 
+                            <a href="https://wa.me/{'+whatsup' | placeholder}?text=Здравствуйте.%20Вопрос%20по%20поводу%20плитки."  class="text-dark" target="_blank">
                                 <i class="fab fa-whatsapp text-success"></i>
                                 Написать в WhatsUp
                             </a>
@@ -51,7 +52,7 @@
         <ul class="nav justify-content-end d-lg-none">
             <li class="nav-item">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="#" class="btn btn-group__cart btn-outline-dark border-0 py-2">
+                    <a href="{$_modx->makeUrl(10)}" class="btn btn-group__cart btn-outline-dark border-0 py-2">
                         <i class="cart-icon"></i>
 
                     </a>
@@ -75,7 +76,7 @@
                 'tplParentRow' => '@INLINE <li class="dropdown nav-item px-2"  aria-labelledby="informationDropdown">
                                      <a class="nav-link dropdown-toggle h-100 py-3 px-0" href="{$link}" id="informationDropdown" role="button" data-toggle="dropdown"
                                  aria-haspopup="true" aria-expanded="false">
-                                 {$menutitle}<i class="fas fa-angle-down"></i> </a> {$wrapper} </li>',
+                                 {$menutitle}<i class="fas fa-angle-down ml-1"></i> </a> {$wrapper} </li>',
                 'tplInner' => '@INLINE  <div class="dropdown-menu" aria-labelledby="informationDropdown">{$wrapper}</div>',
                 'tplInnerRow' => '@INLINE <a class="dropdown-item" href="{$link}" >{$menutitle}</a>'
                 ])}
