@@ -42,10 +42,28 @@ $(document).ready(function () {
 
     // caching data retrieval
     var $totalWeight = $('.total_weight').find('input').val();
+    var $totalCost = $('.total_cost').find('input').val();
+    var $totalDeliveryChecked = $('.delivery').find('input[name="delivery"]').prop("checked");
 
+    if($('.delivery').find('input[name="delivery"]').prop("checked")){
+        var $totalDelivery = $('#ms2_total_price_delivery').val();
+        $('.ms2_total_price_delivery').each(function(){
+            $(this).html($totalDelivery);
+        })
+    }else {
+        $('.ms2_total_price_delivery').each(function(){
+            $(this).html('');
+        })
+    }
+
+    $('.ms2_total_cost').html($totalCost);
     //enumeration and data output
     $('.ms2_total_weight').each(function(){
         $(this).html($totalWeight);
+    })
+    //enumeration and data output
+    $('.ms2_total_cost').each(function(){
+        $(this).html($totalCost);
     })
 
  $(document).on('click touch', '.colours-wrapper-product > li.list-inline-item', function (event) {
