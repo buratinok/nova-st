@@ -124,7 +124,7 @@
                     </tr>
                  
                 {/foreach}
-                <tr class="footer">
+                <tr class="footer justify-content-between">
                     <th class="total">{'ms2_cart_total' | lexicon}:</th>
                     <th class="total_count text-center">
                         <span class="ms2_total_count">{$total.count}</span>
