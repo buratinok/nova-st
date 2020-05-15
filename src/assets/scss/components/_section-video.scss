@@ -36,6 +36,14 @@
 
 @import "header/video-gallery";
 
+@include media-breakpoint-down(lg) {
+  .section-video{
+    &__title{
+      visibility: hidden
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .section-video{
     &__description{
