@@ -39,32 +39,58 @@ $(document).ready(function () {
         }
 
     });
-
-    // caching data retrieval
-    var $totalWeight = $('.total_weight').find('input').val();
-    var $totalCost = $('.total_cost').find('input').val();
-    var $totalDeliveryChecked = $('.delivery').find('input[name="delivery"]').prop("checked");
-
-    if($('.delivery').find('input[name="delivery"]').prop("checked")){
+    if ($('.delivery').find('#delivery_2').prop("checked")) {
+        //input
         var $totalDelivery = $('#ms2_total_price_delivery').val();
-        $('.ms2_total_price_delivery').each(function(){
+
+        $('.ms2_total_price_delivery').each(function () {
             $(this).html($totalDelivery);
         })
-    }else {
-        $('.ms2_total_price_delivery').each(function(){
-            $(this).html('');
-        })
+
     }
 
-    $('.ms2_total_cost').html($totalCost);
-    //enumeration and data output
-    $('.ms2_total_weight').each(function(){
-        $(this).html($totalWeight);
+    $(document).on('click touch', '.form-group .delivery', function (event) {
+        if ($(this).find('#delivery_2').prop("checked")) {
+            //input
+            var $totalDelivery = $('#ms2_total_price_delivery').val();
+            //label
+            var $labelDelivery = $(this).find("label").html();
+
+            $('.ms2_total_price_delivery').each(function () {
+                $(this).html($totalDelivery);
+            })
+            $('.text_delivery').each(function () {
+                $(this).html($labelDelivery);
+            })
+
+        } else {
+            //label
+            var $labelDelivery = $(this).find("label").html();
+            $('.ms2_total_price_delivery').each(function () {
+                $(this).html('');
+            })
+            $('.text_delivery').each(function () {
+                $(this).html($labelDelivery);
+            })
+        }
+
     })
-    //enumeration and data output
-    $('.ms2_total_cost').each(function(){
-        $(this).html($totalCost);
-    })
+        // caching data retrieval
+        var $totalWeight = $('.total_weight').find('input').val();
+        var $totalCost = $('.total_cost').find('input').val();
+
+
+
+        $('.ms2_total_cost').html($totalCost);
+        //enumeration and data output
+        $('.ms2_total_weight').each(function () {
+            $(this).html($totalWeight);
+        })
+        //enumeration and data output
+        $('.ms2_total_cost').each(function () {
+            $(this).html($totalCost);
+        });
+
 
  $(document).on('click touch', '.colours-wrapper-product > li.list-inline-item', function (event) {
 
