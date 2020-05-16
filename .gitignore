@@ -1,4 +1,7 @@
 .DS_Store
+components
+assets
+core
 node_modules
 npm-debug.log
 dist
