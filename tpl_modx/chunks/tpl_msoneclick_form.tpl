@@ -8,7 +8,7 @@
                         <img src="[[+thumb]]" />
                     </div>
                     <div class="col-xs-5 msoc_product_line_pagetitle">
-                        <h4 class="product-name">[[+pagetitle]]</h4>
+                        <h4 class="product-name">[[+longtitle]]</h4>
                     </div>
                     <div class="col-xs-4 msoc_product_line_count">
                         <div class="product__add-cart ">
