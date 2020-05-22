@@ -91,7 +91,7 @@ async function styles() {
         .pipe($.postcss([
             postcssPresetEnv({
                 stage: 2,
-                browsers: COMPATIBILITY,
+                browsers: 'last 0 versions',
                 autoprefixer: {grid: true, cascade: false},
                 features: {'nesting-rules': true}
             })
@@ -174,14 +174,14 @@ async function images() {
     const imgmin = await gulp.src(imgFiles)
         .pipe($.if(PRODUCTION, $.imagemin([
                 $.imagemin.gifsicle({interlaced: true}),
-                $.imagemin.jpegtran({progressive: true}),
+                $.imagemin.jpegtran({ optimizationLevel: 3, progressive: true, interlaced: true}),
                 imageminJpegRecompress({
                     loops: 5,
                     min: 70,
                     max: 75,
                     quality: 'medium'
                 }),
-                $.imagemin.optipng({optimizationLevel: 5}),
+                $.imagemin.optipng({optimizationLevel: 3}),
                 $.imagemin.svgo({
                     plugins: [
                         {removeViewBox: true},
