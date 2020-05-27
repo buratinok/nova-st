@@ -8,7 +8,7 @@
             <div class="modal-header border-0">
                 <h4 class="modal-title my-auto">[[%msoc]]</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"/>
+                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49" alt="close" title="close"/>
                 </button>
             </div>
             

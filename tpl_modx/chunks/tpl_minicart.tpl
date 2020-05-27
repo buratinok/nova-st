@@ -1,7 +1,7 @@
 <div id="msMiniCart" class="cart {$total_count > 0 ? 'full' : ''}">
     <div class="empty h-100">
         <a href="{$_modx->makeUrl(10)}"
-           class="btn btn-group__cart btn-outline-dark position-relative border-0 border-r0 my-2 my-sm-0 py-3 px-5 h-100"
+           class="btn btn-group__cart btn-outline-dark position-relative border-0 border-r0 my-2 my-sm-0 py-3 px-5 h-100 focus-none"
            type="submit">
             <svg class="cart" width="24" height="24" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
     </div>
     <div class="not_empty h-100">
         <a href="{$_modx->makeUrl(10)}"
-           class="btn btn-group__cart btn-outline-dark position-relative border-0 border-r0 my-2 my-sm-0 py-3 px-5 h-100"
+           class="btn btn-group__cart btn-outline-dark position-relative border-0 border-r0 my-2 my-sm-0 py-3 px-5 h-100 focus-none"
             type="submit">
             <svg class="cart" width="24" height="24" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">

@@ -20,18 +20,18 @@
         {if $image}
         <figure class="figure">
             <a href="{$id | url}">
-            <img class="mx-auto d-block img-fluid" src="{$image}" alt="{$pagetitle | htmlent}" style="height: 150px;  ">
+            <img class="mx-auto d-block img-fluid" src="{$image}" alt="{$pagetitle | htmlent}" style="height: 150px;  "  title="{$pagetitle | htmlent}" alt="{$pagetitle | htmlent}">
             </a>
         </figure>
         {else}
         <figure class="figure">
             <a href="{$id | url}">
-            <img class="mx-auto img-fluid d-block" src="{'+conf_noimage' | phpthumbon:'h=150&zc=1&q=99'}" alt="{$pagetitle | htmlent}">
+            <img class="mx-auto img-fluid d-block" src="{'+conf_noimage' | phpthumbon:'h=150&zc=1&q=99'}"  title="{$pagetitle | htmlent}" alt="{$pagetitle | htmlent}">
             </a>
         </figure>
         {/if}
         <div class="card-body py-0">
-            <h6 class="card-title mb-3">{$pagetitle | htmlent}</h6>
+            <h6 class="card-title mb-3">{$longtitle | htmlent}</h6>
             <ul class="list-unstyled">
                 {$_modx->runSnippet("msOptions", [
                 'options'=>'size',

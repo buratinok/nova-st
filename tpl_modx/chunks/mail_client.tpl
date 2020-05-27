@@ -40,9 +40,9 @@
                                     </h3>
                                     <div style="{$style.p}">
                                         
-                                            <h4 style="{$style.h}{$style.h4}">Здесьвы можете скачать нашь прайс-лист:</h4>
+                                            <h4 style="{$style.h}{$style.h4}">Здесь Вы можете скачать наш прайс-лист:</h4>
                                         
-                                        <a href="#" style="{$style.a}">Скачать</a>
+                                        <a href="http://nova-st.ru{$_modx->getPlaceholder('+price_file')}" style="{$style.a}">Скачать</a>
                                     </div>
                                 </td>
                             </tr>

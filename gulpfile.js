@@ -91,7 +91,7 @@ async function styles() {
         .pipe($.postcss([
             postcssPresetEnv({
                 stage: 2,
-                browsers: 'last 0 versions',
+                browsers: 'last 2 versions',
                 autoprefixer: {grid: true, cascade: false},
                 features: {'nesting-rules': true}
             })

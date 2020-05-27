@@ -5,7 +5,7 @@
         <div class="modal-content bg-transparent border-0">
             <div class="modal-header border-0">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"/>
+                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"  title="close" alt="close"/>
                 </button>
             </div>
             <div class="modal-body">
@@ -23,7 +23,7 @@
                             {insert 'file:chunks/base_form_feedback.tpl'}
                             </div>
                         <div class="col-3 position-absolute modal-feedback__image d-none d-lg-block">
-                            <img src="assets/templates/nova-st/img/modal-consultation/worker.png" class="mx-auto d-block img-fluid"/>
+                            <img src="assets/templates/nova-st/img/modal-consultation/worker.png" class="mx-auto d-block img-fluid"  title="close" alt="close"/>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
         <div class="modal-content bg-transparent border-0">
             <div class="modal-header border-0">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"/>
+                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"   title="close" alt="close"/>
                 </button>
             </div>
             <div class="modal-body">
@@ -74,16 +74,16 @@
                         <ul class="list-unstyled d-flex justify-content-center mt-4 w-100">
                             <li class="ml-1">
                                 <a href="{'+vk' | placeholder}">
-                                    <img src="assets/templates/nova-st/img/footer/vk .png" height="26" width="25"/>
+                                    <img src="assets/templates/nova-st/img/footer/vk .png" height="26" width="25"   title="vk" alt="vk"/>
                                 </a></li>
                             <li class="ml-1">
                                 <a href="{'+instagram' | placeholder}">
-                                    <img src="assets/templates/nova-st/img/footer/instagram.png" height="26" width="25"/>
+                                    <img src="assets/templates/nova-st/img/footer/instagram.png" height="26" width="25" title="instagram" alt="instagram"/>
                                 </a>
                             </li>
                             <li class="ml-1">
                                 <a href="{'+facebook' | placeholder}">
-                                    <img src="assets/templates/nova-st/img/footer/facebook.png" height="26" width="25"/>
+                                    <img src="assets/templates/nova-st/img/footer/facebook.png" height="26" width="25" title="facebook" alt="facebook"/>
                                 </a>
                             </li>
                         </ul>
@@ -100,16 +100,16 @@
         <div class="modal-content bg-transparent border-0">
             <div class="modal-header border-0">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"/>
+                    <img src="assets/templates/nova-st/img/modal-consultation/close.png" height="49" width="49"  title="close" alt="close"/>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="card flex-row xp-lg-4 border-0">
                     <div class="col-md-6 d-md-block d-none p-0">
-                        <img src="assets/templates/nova-st/img/modal-consultation/modal-price.jpg"
+                        <img src="assets/templates/nova-st/img/modal-consultation/modal-price.jpg"  title="price" alt="price"
                              class="mx-auto d-block img-fluid border-r20"/>
                     </div>
-                    <div class="col-12 col-md-6 p-md-5">
+                    <div class="col-12 col-md-6 px-md-5 pt-md-5">
                         <div class="card-text mt-5 mt-md-auto px-2">
                             <h5 class="modal-title text-center mt-3" id="exampleModalCenterTitle">Скачайте прайс со скидкой!</h5>
                             <ul class="list-unstyled">
@@ -120,9 +120,10 @@
                                     </i><span class="ml-1">Информационный материал</span></li>
                             </ul>
                         </div>
+                        <h5 class="modal-title text-center mt-3">Заполните форму</h5>
                         <div class="card-body row position-relative justify-content-center pt-0 pt-md-2">
                             <div class="col-12">
-                                {insert 'file:chunks/base_form_feedback.tpl'}
+                                {insert 'file:chunks/base_form_price_header.tpl'}
                             </div>
                         </div>
                     </div>

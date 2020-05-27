@@ -1,7 +1,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card  border-0" >
-                    <img src="{if $_pls['tv.img_information']} {$_pls['tv.img_information']} {else} {$_modx->getPlaceholder('+noimage')} {/if}" class="card-img-top border-r0" alt="{$pagetitle | htmlent}">
+                    <img src="{if $_pls['tv.img_information']} {$_pls['tv.img_information']} {else} {$_modx->getPlaceholder('+noimage')} {/if}" class="card-img-top border-r0" alt="{$pagetitle | htmlent}" title="{$pagetitle | htmlent}">
                     <div class="card-body pl-0">
                         <h5 class="card-title">{$longtitle}</h5>
                         <p class="news-date">{$publishedon| date_format : "%d.%m.%Y"}</p>

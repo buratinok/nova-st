@@ -8,7 +8,7 @@
                             </div>
                         </div>
                         <div class="col-8 col-md-6 d-flex justify-content-center">
-                            <img src="{$_pls['tv.img_information']}" class="img-fluid" alt="">
+                            <img src="{$_pls['tv.img_information']}" class="img-fluid" alt="information" title="information">
                         </div>
                     </div>
                 </div>

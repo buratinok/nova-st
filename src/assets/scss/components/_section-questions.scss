@@ -3,6 +3,7 @@
     .nav{
       &-link{
         color: $dark;
+        white-space: nowrap;;
         &.active{
           position: relative;
           background-color: transparent;

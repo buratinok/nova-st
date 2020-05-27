@@ -1,6 +1,6 @@
 
 {foreach $options as $option}
-    {if $option.id != 4  && $option.id != 5 && $option.id != 6}
+    {if $option.id != 4  && $option.id != 5 && $option.id != 6 && $option.id != 10}
     <li class="fonts-size-18 mt-2">
         <span>{$option.caption}:</span>
         <span class="float-right font-weight-bold fonts-size-20">

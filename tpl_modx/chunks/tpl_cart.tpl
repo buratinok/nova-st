@@ -23,21 +23,21 @@
                {* <pre>
                      {$products | var_dump}</pre>*}
                     <tr id="{$product.key}">
-                        <th scope="row" style="width: 480px">
+                        <th scope="row" style="max-width: 220px">
                             <div class="card flex-row border-0">
-                                <div class="col-3 d-none d-md-block">
+                                <div class="col d-none d-md-block px-0">
                                     {if $product.image}
                                         <img class="mx-auto img-fluid" src="{$product.image}"
-                                             alt="{$product.pagetitle | htmlent}"/>
+                                             alt="{$product.pagetitle | htmlent}"  title="{$product.pagetitle | htmlent}"/>
                                     {else}
                                         <img class="mx-auto img-fluid" src="{$_modx->getPlaceholder('+conf_noimage')}"
-                                             alt="{$product.pagetitle | htmlent}"/>
+                                             alt="{$product.pagetitle | htmlent}" title="{$product.pagetitle | htmlent}"/>
                                     {/if}
                                 </div>
-                                <div class="col col-lg-6">
+                                <div class="col px-0">
                                     <div class="card-body py-0">
                                         <a href="{$product.id | url}"
-                                           class="h6 card-title stretched-link mb-3">{$product.article | htmlent}-{$product.pagetitle | htmlent}</a>
+                                           class="h6 card-title stretched-link mb-3">{$product.article | htmlent}-{$product.longtitle | htmlent}</a>
 
                                         <ul class="list-unstyled">
                                             {if $product.size[0]}
@@ -70,10 +70,17 @@
                                                 <span class="float-right">
                                                     <ul class="list-inline mb-0 colours-wrapper ">
                                                         
-                                                        {foreach $modopt as $row}
+                                                        {foreach $modopt as $row index=$index}
+                                                        {set $all = "all"}
                                                             {if $row}
                                                                 <li class="list-inline-item m-0">
-                                                                    <label for="colour" style="background-color:#{$row["color"]}" class="btn-colour border-r50 p-2"> </label>
+                                                                    <label for="colour"
+                                                                    {if $row["name"] != $all}
+                                                                     style="background-color:#{$row["color"]}"
+                                                                     {else}
+                                                                     style="background: radial-gradient(circle, rgba(255,4,0,1) 0%, rgba(254,255,0,1) 14%, rgba(0,255,37,1) 28%, rgba(70,86,252,1) 49%, rgba(222,70,252,1) 67%, rgba(252,219,70,1) 93%);"
+                                                                     {/if}
+                                                                    class="btn-colour border-r50 p-2"> </label>
                                                                     <input type="hidden" name="options[colour]" value="{$row["value"]}" id="colour"
                                                                            class="inut-invisible">
                                                                 </li> <!--/colors-->
@@ -98,7 +105,7 @@
                                 <div class="btn-group quantity buttons_added border le-quantity">
                                         <button type="submit" class="btn button-minus border-r0 text-gray d-block focus-none"  name="ms2_action" value="cart/change">
                                             - </button>
-                                            <input type="number" step="1" min="1" max="" name="count" value="{$product.count}" title="number" style="width: 100px;"
+                                            <input type="text" step="1" min="1" max="" name="count" value="{$product.count}" title="number" style="width: 100px;"
                                                class="text-center border-0 input-text quantity-field qty text form-control focus-none counter" size="4" pattern="" inputmode="">
                                         <button type="submit" class="btn button-plus border-r0 text-gray d-block focus-none"  name="ms2_action" value="cart/change"
                                         >
@@ -124,7 +131,7 @@
                     </tr>
                  
                 {/foreach}
-                <tr class="footer justify-content-between">
+                <tr class="footer border-top">
                     <th class="total">{'ms2_cart_total' | lexicon}:</th>
                     <th class="total_count text-center">
                         <span class="ms2_total_count">{$total.count}</span>
@@ -134,6 +141,7 @@
                         <input type="hidden" value="{$total.weight}">
                     </th>
                     <th class="total_cost text-nowrap pl-0" colspan="2">
+                        <input type="hidden" value="{$total.cost}">
                         <span class="ms2_total_cost">{$total.cost}</span>
                         {'ms2_frontend_currency' | lexicon}
                     </th>

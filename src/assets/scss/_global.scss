@@ -162,3 +162,18 @@ h1{
   }
 
 }
+
+.modal{
+  z-index: 1060;
+}
+.lg-outer{
+  z-index: 1060;
+}
+
+.lg-backdrop.in {
+  z-index: 1055;
+}
+
+.border-dashed_bottom{
+  border-bottom: 1px dashed;
+}
