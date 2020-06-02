@@ -118,6 +118,11 @@ const $carouselHeader = function () {
         hash: true,
         galleryId: 2
     });
+    $('#product-thumbnials').lightGallery({
+            thumbnail:true,
+            animateThumb: false,
+            showThumbByDefault: false
+    });
     });
     $(document).ready(function() {
         $('#show_all a').click(function() {
