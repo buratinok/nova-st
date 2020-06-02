@@ -93,6 +93,8 @@ h1{
 .scroll-x {
   overflow-x: scroll;
   overflow-scrolling: touch;
+  scrollbar-color: #e4e2de #fff;
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar-thumb {
