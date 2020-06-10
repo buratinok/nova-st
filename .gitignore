@@ -1,6 +1,6 @@
 .DS_Store
 components
-assets
+gallery
 core
 manager
 node_modules
@@ -10,3 +10,4 @@ dist
 .cache
 .idea
 build
+buil
