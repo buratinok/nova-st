@@ -3,29 +3,31 @@
                                                             'toPlaceholder' => 'result',
                                                             'return' => 'data'
                                                             ])}
-<li class="list-inline-item m-0 ">
-    {foreach $options as $name => $value}
+<li class="list-inline-item m-0 msoptionsprice-{$id}">
+    {foreach $options as $name => $values}
+
 	    {foreach $optionscolors as $optionscolor}
+
 		    {foreach $optionscolor as $optionsc index=$index}
-			    {if $optionsc['value'] == $value}
-			        <label
-                            for="colour_{$optionsc["name"]}"
-                            style="background-color: #{$optionsc['color']}"
-                            class="btn-colour border-r50 p-2 ml-2  {$index!=6 ? '' : "active"}"> </label>
+
+			    {if $optionsc['value'] == $values}
+
 				    <input
                             type="radio"
-                            name='options[option]'
-                            value='{ "price":"{$price}","color":"{$optionsc['name']}","background-color":"#{$optionsc['color']}" }'
+                            name='options[{$name}]'
+                           {$index !=6 ? '' : "checked"}
+                            value="{$values}"
                             id="colour_{$optionsc["name"]}"
-                           
                             class="inut-invisible">
+                    <label
+                            for="colour_{$optionsc["name"]}"
+                            style="background-color: #{$optionsc['color']}"
+                            class="btn-colour border-r50 p-2 ml-2  {$index !=6 ? '' : "active"}"> </label>
 				{/if}
             {/foreach}
         {/foreach}
     {/foreach}
 </li>
-
-
 
 
 

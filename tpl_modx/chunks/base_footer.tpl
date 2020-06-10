@@ -25,20 +25,20 @@
                         <ul class="list-unstyled d-flex justify-content-around justify-content-md-start mt-3">
                             {if '+vk' | placeholder}
                             <li class="ml-3">
-                                <a href="{'+vk' | placeholder}">
+                                <a href="{'+vk' | placeholder}" target="_blank">
                                     <img src="assets/templates/nova-st/img/footer/vk .png" height="26" width="25"/>
                                 </a></li>
                                 {/if}
                             {if '+instagram' | placeholder}
                             <li class="ml-3">
-                                <a href="{'+instagram' | placeholder}">
+                                <a href="{'+instagram' | placeholder}" target="_blank">
                                     <img src="assets/templates/nova-st/img/footer/instagram.png" height="26" width="25"/>
                                 </a>
                             </li>
                             {/if}
                             {if '+facebook' | placeholder}
                             <li class="ml-3">
-                                <a href="{'+facebook' | placeholder}">
+                                <a href="{'+facebook' | placeholder}" target="_blank">
                                     <img src="assets/templates/nova-st/img/footer/facebook.png" height="26" width="25"/>
                                 </a>
                             </li>

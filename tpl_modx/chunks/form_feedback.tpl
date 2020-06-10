@@ -16,7 +16,7 @@
     <button type="submit" class="btn btn-warning w-100 mt-4">Заказать звонок</button>
 
 
-    <p class="text-center text-muted mt-4 mb-0">Нажимая на кнопку “Получит консультацию” вы
+    <p class="text-center text-muted mt-4 mb-0">Нажимая на кнопку “Получить консультацию” вы
         даёте согласие на обработку <a href="">
             персональных данных
         </a></p>
