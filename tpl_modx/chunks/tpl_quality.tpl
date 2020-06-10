@@ -12,7 +12,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 px-3 px-md-0">
-                        <img src="{$_modx->resource.imgquality}" class="img-fluid" alt="...">
+                        <img src="{$_modx->resource.imgquality}" class="img-fluid" alt="img quality"  title="img quality">
                     </div>
                 </div>
             </div>

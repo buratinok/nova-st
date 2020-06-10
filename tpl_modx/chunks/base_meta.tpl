@@ -1,8 +1,8 @@
 <base href="{$_modx->config.site_url}">
 <meta charset="{$_modx->config.modx_charset}" />
 
-{if $_modx->resource.seodescription}
-    <meta name="description" content="{$_modx->resource.seodescription}">
+{if $_modx->resource.description}
+    <meta name="description" content="{$_modx->resource.description}">
 {/if}
 {if $_modx->resource.seokeywords}
     <meta name="keywords" content="{$_modx->resource.seokeywords}">
@@ -18,10 +18,17 @@
 <title>
     {$_modx->resource.seotitle?: $_modx->resource.pagetitle}
 </title>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Source+Sans+Pro&display=swap" rel="stylesheet">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lg-transitions.min.css">
+
+<link rel="stylesheet" href="assets/templates/nova-st/css/swiper.min.css">
+<link rel="stylesheet" href="assets/templates/nova-st/css/lightgallery.min.css">
+<link rel="stylesheet" href="assets/templates/nova-st/css/lg-transitions.min.css">
+ <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+
 <link rel="stylesheet" href="assets/templates/nova-st/css/bootstrap.css">
+
 <link rel="stylesheet" href="assets/templates/nova-st/css/style.css">
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->

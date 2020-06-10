@@ -29,5 +29,5 @@
     </div>
 </div>
 <div class="col-lg-6 p-5 d-flex justify-content-center">
-    <img class="img-fluid" src="[[*img_information]]">
+    <img class="img-fluid" src="[[*img_information]]" title="{$_modx->resource.pagetitle | htmlent}" alt="{$_modx->resource.pagetitle | htmlent}">
 </div>

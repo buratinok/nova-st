@@ -31,23 +31,66 @@ $(document).ready(function () {
             var $trPrice = $(this).find('input.price').val();
             var $trCounter = $(this).find('input.counter').val();
             var $trCost = $tr.find('.cost');
-
             //cost calculation
-            var $priceCost = $trPrice * $trCounter;
+            var $priceCost = parseFloat($trPrice.replace(",",".").replace(/[^0-9.]/gim, "")) * $trCounter;
 
             //data output
             $trCost.html($priceCost);
         }
 
     });
+    if ($('.delivery').find('#delivery_2').prop("checked")) {
+        //input
+        var $totalDelivery = $('#ms2_total_price_delivery').val();
 
-    // caching data retrieval
-    var $totalWeight = $('.total_weight').find('input').val();
+        $('.ms2_total_price_delivery').each(function () {
+            $(this).html($totalDelivery);
+        })
 
-    //enumeration and data output
-    $('.ms2_total_weight').each(function(){
-        $(this).html($totalWeight);
+    }
+
+    $(document).on('click touch', '.form-group .delivery', function (event) {
+        if ($(this).find('#delivery_2').prop("checked")) {
+            //input
+            var $totalDelivery = $('#ms2_total_price_delivery').val();
+            //label
+            var $labelDelivery = $(this).find("label").html();
+
+            $('.ms2_total_price_delivery').each(function () {
+                $(this).html($totalDelivery);
+            })
+            $('.text_delivery').each(function () {
+                $(this).html($labelDelivery);
+            })
+
+        } else {
+            //label
+            var $labelDelivery = $(this).find("label").html();
+            $('.ms2_total_price_delivery').each(function () {
+                $(this).html('');
+            })
+            $('.text_delivery').each(function () {
+                $(this).html($labelDelivery);
+            })
+        }
+
     })
+        // caching data retrieval
+        var $totalWeight = $('.total_weight').find('input').val();
+        var $totalCost = $('.total_cost').find('input').val();
+
+
+
+        $('.ms2_total_cost').html($totalCost);
+        //enumeration and data output
+        $('.ms2_total_weight').each(function () {
+            $(this).html($totalWeight);
+        })
+        //enumeration and data output
+        $('.ms2_total_cost').each(function () {
+            $(this).html($totalCost);
+        });
+
 
  $(document).on('click touch', '.colours-wrapper-product > li.list-inline-item', function (event) {
 
@@ -58,21 +101,6 @@ $(document).ready(function () {
 
      //Add active class
      $(this).find('label').addClass('active');
-
-   /*  //Add checked
-     $(this).find('input').prop('checked', true);
-
-     //get attrs of price
-     var _input = $(this).find('input').val();
-
-     //obj from JSON(str)
-     _input = JSON.parse(_input);
-
-     //change price in tag
-     $('.msoptionsprice-cost', document).html(_input.price);*/
-
-     //cancel 2 events
-    /* return false;*/
 
  })
 

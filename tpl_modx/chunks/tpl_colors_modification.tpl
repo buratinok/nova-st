@@ -11,6 +11,12 @@
 		    {foreach $optionscolor as $optionsc index=$index}
 
 			    {if $optionsc['value'] == $values}
+			     <input
+                            type="hidden"
+                            name='input_color[{$name}]'
+                            value="{$optionsc["name"]}"
+                            class="inut-invisible input_color"
+                            >
 
 				    <input
                             type="radio"
@@ -18,11 +24,23 @@
                            {$index !=6 ? '' : "checked"}
                             value="{$values}"
                             id="colour_{$optionsc["name"]}"
-                            class="inut-invisible">
+                            class="inut-invisible"
+                            >
+                            {set $all = 'all'}
                     <label
                             for="colour_{$optionsc["name"]}"
-                            style="background-color: #{$optionsc['color']}"
-                            class="btn-colour border-r50 p-2 ml-2  {$index !=6 ? '' : "active"}"> </label>
+                            {if $optionsc["name"] != $all}
+                            style="background: #{$optionsc['color']}"
+                            {else}
+                            style="background: radial-gradient(circle, rgba(255,4,0,1) 0%, rgba(254,255,0,1) 14%, rgba(0,255,37,1) 28%, rgba(70,86,252,1) 49%, rgba(222,70,252,1) 67%, rgba(252,219,70,1) 93%);"
+                            {/if}
+                            class="btn-colour border-r50 p-2 ml-2 {$optionsc['name']}  {$index !=6 ? '' : "active"}"
+                            data-original-color="{$values}"
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="{$values} - {$price}р."
+                            data-title-url="?color={$optionsc['name']}"
+                            > </label>
 				{/if}
             {/foreach}
         {/foreach}

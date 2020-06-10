@@ -1,14 +1,16 @@
-
 {$_modx->runSnippet("!AjaxForm", [
 'snippet' => 'FormIt',
-'form' => '@FILE chunks/form_feedback.tpl',
-'hooks' => 'spam,email,FormItSaveForm',
+'form' => '@FILE chunks/form_price_header.tpl',
+'hooks' => 'spam,email,FormItSaveForm,FormItAutoResponder',
 'emailTpl' => '@FILE chunks/mail_mail.tpl',
-'emailSubject' => 'Заказан звонок',
+'emailSubject' => 'Скачан прайс-лист',
 'emailTo' => $_modx->getPlaceholder('+conf_to_email'),
 'emailFrom' => $_modx->config.emailsender,
 'formName' => 'Заказать звонок',
 'validate' => 'page:required,name:required,username:blank',
 'validationErrorMessage'=>'Пожалуйста, исправьте ошибки!',
-'successMessage' =>'Спасибо Ваше сообщение успешно отправлено',
+'successMessage' =>'Спасибо Прайс-лист отправлен Вам на почту',
+
+'fiarTpl'=>'@FILE chunks/mail_client.tpl',
+'fiarSubject'=>'Прайс-лист "Nova stroy"',
 ])}

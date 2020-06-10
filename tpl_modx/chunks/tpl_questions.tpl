@@ -9,7 +9,7 @@
 
         {if $rows}
         {foreach $rows as $key => $row}
-        <div class="card mt-2 border-r0">
+        <div class="card mt-2 border-r0 py-1">
             <div class="card-header border-0 bg-white position-relative px-1 px-md-4" id="heading{$row.id}">
         
                 <button class="btn btn-link btn-accordion text-dark text-decoration-none  px-2" data-js="false" type="button"
@@ -34,5 +34,5 @@
     </div>
 </div>
 <div class="col-lg-6 p-5 d-flex justify-content-center">
-    <img class="img-fluid" src="{$_pls['tv.imgcompany']}">
+    <img class="img-fluid" src="{$_pls['tv.imgcompany']}"  title="img company" alt="img company">
 </div>

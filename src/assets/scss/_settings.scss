@@ -1,8 +1,4 @@
 
-//база
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Rubik:300&display=swap&subset=cyrillic');
-
 
 //bootstrap
 $light: #f9f9f9;
@@ -37,6 +33,7 @@ $line_height: 21px;
 $family: $font-family-sans-serif;
 $weight:400;
 $va:18;
+$h1-font-size: 2.25rem;
 
 :root {
   --swiper-theme-color: #E97A5A;

@@ -13,7 +13,7 @@
             </div>
         {/foreach}
     </div>
-    <div class="form-row pt-3 pt-md-5" id="deliveries">
+    <div class="form-row justify-content-between pt-3 pt-md-5" id="deliveries">
 
         <fieldset class="form-group">
             <legend class="h5 text-left pt-0 pb-3">{'ms2_frontend_deliveries' | lexicon}:</legend>
@@ -36,20 +36,19 @@
             </div>
         </fieldset>
 
-        {foreach ['index','region','city'] as $field}
+      
             <div class="form-group col-12 col-md-4">
-                <label for="{$field}" class="h5 text-left">{('ms2_frontend_' ~ $field) | lexicon}</label>
-                <input type="text" class="form-control {($field in list $errors) ? ' error' : ''}" id="{$field}"
-                       name="{$field}"
-                       placeholder="{('ms2_frontend_' ~ $field) | lexicon}" value="{$form[$field]}">
+                <label for="city" class="h5 text-left select-appearance_none select_arrow ">Адресс доставки</label>
+                <input type="text" class="form-control {('ms2_frontend_city' in $errors) ? ' error' : ''} input_arrow" id="city"
+                       name="city"
+                       placeholder="346817, Москва, ул. Текучева 130/2" value="">
             </div>
-        {/foreach}
     </div>
     <div class="form-row pt-3 pt-md-5" id="payments">
         <fieldset class="form-group justify-content-md-between col-auto">
             <legend class="h5 text-left pt-0">{'ms2_frontend_payments' | lexicon}:</legend>
             <div class="row">
-                <div class="col d-flex flex-row">
+                <div class="col d-flex flex-column flex-md-row">
                     {foreach $payments as $payment index=$index}
 
                         {var $checked = !$order.payment && $index == 0 || $payment.id == $order.payment}
@@ -73,9 +72,15 @@
         <img src="assets/templates/nova-st/img/weights.png"
              class="mb-3 mb-md-auto mx-auto img-fluid d-block"/>
         <div class="media-body col-12 col-md-6 bg-secondary p-5">
-            <h5 class="mt-3">Вес: <span class="float-right">{$order.num}
-                        <span class="ms2_total_weight">{$total.weight}</span>
-                        {'ms2_frontend_weight_unit' | lexicon}
+            <h5 class="mt-3">Сумма: <span class="float-right">
+                        <span class="ms2_total_cost">{$total.cost}</span>
+                        {'ms2_frontend_currency' | lexicon}
+                    </span>
+            </h5>
+            <h5 class="mt-3"><span class="text_delivery">Самовывоз</span>: <span class="float-right">
+                        <input id="ms2_total_price_delivery" type="hidden" value="{$delivery.price}">
+                        <span class="ms2_total_price_delivery"></span>
+                        {'ms2_frontend_currency' | lexicon}
                     </span>
             </h5>
             <hr>
@@ -84,7 +89,7 @@
                     </span></span></h4>
         </div>
     </div>
-    <button type="submit" name="ms2_action" value="order/submit"
+    <button type="submit" name="ms2_action" value="order/submit" onclick="ym(21115507,'reachGoal','tnx_order'); return true;"
             class="btn btn-outline-danger px-5 float-right ms2_link"> {'ms2_frontend_order_submit' | lexicon}
     </button>
 </form>

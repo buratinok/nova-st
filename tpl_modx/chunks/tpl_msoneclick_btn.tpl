@@ -1,3 +1,5 @@
-<a href="{$id | url}#{$selector}" data-hash="{$hash}" data-product="{$id}" class="{$selector} one-click btn_one_click">
-    <span>{$_modx->lexicon('msoc_btn_one_click')}</span>
+<a href="[[~[[+id]]]]#[[+selector]]" id="[[+selector]]" data-hash="[[+hash]]" data-product="[[+id]]" class="btn btn-outline-danger px-4 py-3 py-md-2 mt-3 mt-md-auto">
+    Оставить заявку
 </a>
+
+

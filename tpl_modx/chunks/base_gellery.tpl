@@ -5,7 +5,7 @@
 'limit'=>'6',
 'tpl' => '@CODE: <div class="col-6 col-md-4 p-1 p-sm-2 image">
 <div class="item" data-src="[[+image]]">
-<img class="mx-auto d-block img-fluid" src="[[+image]]" alt="[[+published]]">
+<img class="mx-auto d-block img-fluid" src="[[+image]]" alt="img_galery" title="img_galery">
 </div>
 </div>',
 'element' => 'getImageList',

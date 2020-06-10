@@ -1,26 +1,15 @@
-<form id="price_download" action="{$_modx->resource.id | url}"  class="section-consultation__form"  method="post"  enctype="multipart/form-data" onsubmit="ym(21115507,'reachGoal','dwn_price'); return true;">
+<form id="price_download" action="{$_modx->resource.id | url}" method="post" class="section-consultation__form" enctype="multipart/form-data">
     <input type="hidden" name="page" value="{$_modx->resource.pagetitle | htmlent}">
     <input type="hidden" name="pageid" value="{$_modx->resource.id}">
     <input type="hidden" name="form_name" value="Скачал прайс лист">
-    <div class="form-group position-relative d-none">
-        <label for="callbackform_username">Ваше имя</label>
-        <input type="text" name="username" class="form-control mt-4"
-                id="callbackform_username"
-               placeholder="пользователь">
-    </div>
     <div class="form-group position-relative">
         <i class="user-icon position-absolute"></i>
         <input type="text" name="name" class="form-control mt-4"
-               placeholder="Имя">
-    </div>
-    <div class="form-group position-relative">
-        <i class="phone-icon position-absolute"></i>
-        <input type="tel" name="phone" class="form-control mt-4"
-               placeholder="Телефон">
+               placeholder="ФИО">
     </div>
     <div class="form-group position-relative">
         <i class="email-icon position-absolute"></i>
-        <input type="email" name="email" class="form-control mt-4" placeholder="Почта">
+        <input type="text" name="email" class="form-control mt-4" placeholder="Почта">
     </div>
 
     <button type="submit" class="btn btn-warning w-100 mt-4">
@@ -32,5 +21,3 @@
             персональных данных
         </a></p>
 </form>
-
-

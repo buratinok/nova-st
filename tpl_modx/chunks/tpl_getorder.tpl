@@ -1,54 +1,71 @@
 <div class="alert alert-success" role="alert">
-    <p>Уважаемый покупатель! Ваш заказ успешно оформлен и поставлен в очередь на обработку. В ближайшее время с вами
+    <p><strong>Уважаемый покупатель!</strong> Ваш заказ успешно оформлен и поставлен в очередь на обработку. В ближайшее время с вами
         свяжется наш специалист для уточнения деталей заказа. Заказу был присвоен номер:</p>
-    <div class="text-center">
-        <h3 class="text-white">{$order.num}</h3>
-    </div>
 </div>
-<button type="button" data-toggle="modal" data-target="#modalThanks"
-                class="btn btn-outline-danger px-5 float-right">Спасибо за заказ!
-</button>
-
-<div id="msCart" class="msgetorder">
-    <div class="table-responsives">
+<div class="d-flex flex-column flex-md-row justify-content-around mb-3" data-toggle="modal" data-target="#modalThanks">
+    <button class="btn btn-outline-primary px-5 float-right ms2_link"> 
+    Перейти на главную
+    </button>
+     <h3 class="text-center">№ {$order.num}</h3>
+</div>
+<div id="msCart">
+    <div class="table-responsive">
         <table class="table table-striped">
             <tr class="header">
-                <th class="image"> </th>
                 <th class="title">{'ms2_cart_title' | lexicon}</th>
                 <th class="count">{'ms2_cart_count' | lexicon}</th>
+                <th class="weight">{'ms2_cart_weight' | lexicon}</th>
                 <th class="price">{'ms2_cart_cost' | lexicon}</th>
             </tr>
             {foreach $products as $product}
+                {var $image}
+                {if $product.thumb?}
+                    <img src="{$product.thumb}" alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+                {else}
+                    <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+                         srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+                         alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+                {/if}
+                {/var}
                 <tr>
-                    <td class="image">
-                        {if $product.image?}
-                            <img src="{$product.image}" alt="{$product.pagetitle | htmlent}" title="{$product.pagetitle | htmlent}" width="40"/>
-                        {else}
-                            <img src="{$_modx->getPlaceholder('+noimage')}" alt="{$product.pagetitle | htmlent}" title="{$product.pagetitle | htmlent}"  width="40"/>
-                        {/if}
-                    </td>
                     <td class="title">
-                        {if $product.id?}
-                            <a href="{$product.id | url}">{$product.name}</a>
-                        {else}
-                            {$product.name}
-                        {/if}
-                        {if $product.options?}
-                            <div class="small">
-                                {$product.options | join : '; '}
+                        <div class="d-flex">
+                            <div class="image mw-100 pr-3">
+                                {if $product.id?}
+                                    <a href="{$product.id | url}">{$image}</a>
+                                {else}
+                                    {$image}
+                                {/if}
                             </div>
-                        {/if}
+                            <div class="title d-flex flex-column">
+                                {if $product.id?}
+                                    <a href="{$product.id | url}">{$product.pagetitle}</a>
+                                {else}
+                                    {$product.name}
+                                {/if}
+                                {if $product.options?}
+                                   {* <div class="small">
+                                        {$product.options.color}
+                                    </div>*}
+                                    {include 'file:chunks/tpl_cart_color.tpl'}
+                                {/if}
+                            </div>
+                        </div>
                     </td>
-                    <td class="count">{$product.count} {'ms2_frontend_count_unit' | lexicon}</td>
-                    <td class="price">{$product.price} {'ms2_frontend_currency' | lexicon}</td>
+                    <td class="count text-nowrap">{$product.count} {'ms2_frontend_count_unit' | lexicon}</td>
+                    <td class="weight text-nowrap">{$product.weight} {'ms2_frontend_weight_unit' | lexicon}</td>
+                    <td class="price text-nowrap">{$product.price} {'ms2_frontend_currency' | lexicon}</td>
                 </tr>
             {/foreach}
             <tr class="footer">
-                <th class="total" colspan="2">{'ms2_cart_total' | lexicon}:</th>
-                <th class="total_count">
+                <th class="total">{'ms2_cart_total' | lexicon}:</th>
+                <th class="total_count text-nowrap">
                     <span class="ms2_total_count">{$total.cart_count}</span> {'ms2_frontend_count_unit' | lexicon}
                 </th>
-                <th class="total_cost">
+                <th class="total_weight text-nowrap">
+                    <span class="ms2_total_weight">{$total.cart_weight}</span> {'ms2_frontend_weight_unit' | lexicon}
+                </th>
+                <th class="total_cost text-nowrap">
                     <span class="ms2_total_cost">{$total.cart_cost}</span> {'ms2_frontend_currency' | lexicon}
                 </th>
             </tr>
@@ -56,11 +73,16 @@
     </div>
 
     <h4>
-        {'ms2_frontend_order_cost' | lexicon}:
+        Итог:
         {if $total.delivery_cost}
             {$total.cart_cost} {'ms2_frontend_currency' | lexicon} + {$total.delivery_cost}
             {'ms2_frontend_currency' | lexicon} =
         {/if}
-        <strong>{$total.cost}</strong> {'ms2_frontend_currency' | lexicon}
+        <strong> {$total.cost}</strong> {'ms2_frontend_currency' | lexicon}
     </h4>
+
+    {if $payment_link?}
+        <p>{'ms2_payment_link' | lexicon : ['link' => $payment_link]}</p>
+    {/if}
+
 </div>
