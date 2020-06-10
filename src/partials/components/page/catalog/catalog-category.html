@@ -62,7 +62,59 @@
     </div>
     <div class="catalog-category__tab container-lg">
         <div class="row">
-            <div class="tab-content w-100" id="pills-tabContent">
+
+            <div class="col-3 catalog-form  border border-r0 p-3 mb-sm-3" style="max-height: 450px;">
+                <form>
+                    <div class="form-row flex-column">
+                        <div class="col">
+                            <label for="formPrice" class="font-weight-bold fonts-size-14">Цена</label>
+                            <input type="text" class="form-control" id="formPrice" placeholder="от">
+                        </div>
+                        <div class="col">
+                            <label for="formPrice2"
+                                    class="font-weight-bold fonts-size-14 invisible">Цена2</label>
+                            <input type="text" class="form-control" id="formPrice2" placeholder="до">
+                        </div>
+                        <div class="col">
+                            <label for="modeProduction" class="font-weight-bold fonts-size-14">Способ
+                                производства</label>
+                            <select id="modeProduction" class="form-control">
+                                <option selected>Не выбран</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="theAppointment"
+                                    class="font-weight-bold fonts-size-14">Назначение</label>
+                            <select id="theAppointment" class="form-control">
+                                <option selected>Дачный</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="theSize" class="font-weight-bold fonts-size-14">Назначение</label>
+                            <select id="theSize" class="form-control">
+                                <option selected>80 (100х200х80)</option>
+                                <option>80 (100х200х80)</option>
+                                <option>80 (100х200х80)</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="otherParameters" class="font-weight-bold fonts-size-14">Другие
+                                параметры</label>
+                            <select id="otherParameters" class="form-control">
+                                <option selected>Тонкий</option>
+                                <option>Тонкий</option>
+                                <option>Тонкий</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col tab-content w-100" id="pills-tabContent">
 
                     {{>card-catalog}}
                     
