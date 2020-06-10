@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
+<div class="col-6 col-sm-4 col-md-3 mb-0 mb-sm-3 py-1 py-sm-0 px-1 px-sm-2">
+    <div class="card border-r0 h-100">
+=======
 <div class="col-6 col-sm-4 col-md-3 mb-0 mb-sm-3 py-sm-0 px-sm-2" style="min-height: 368px;">
     <div class="card border-r0 h-100" >
+>>>>>>> 92157d3b01f97d88f2e018c2ae033fcd9898b639
         <div class="position-absolute py-3 d-flex flex-column z-2">
             {if $old_price>0}
                 <span class="badge badge-danger text-left text-uppercase text-white border-l-r0 p-2 fonts-size-10"><i
