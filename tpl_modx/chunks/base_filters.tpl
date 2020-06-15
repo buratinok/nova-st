@@ -28,15 +28,17 @@
             msoption|goals:default,
             msoption|thickness:default,
             msoption|appointment:default,
-            msoption|modeproduction:default,
-            msoption|shape:default',
+            msoption|modeproduction:modeproduction,
+            msoption|shape:default,
+            msoption|length:length',
 'aliases' => '{*ms|price==price*},
             ms|vendor==vendor,
             msoption|goals==goals,
             msoption|thickness==thickness,
             msoption|appointment==appointment,
             msoption|modeproduction==modeproduction,
-            msoption|shape==shape',
+            msoption|shape==shape,
+            msoption|length==length',
 'ajaxMode' => 'default',
 'filterOptions' => '{
 			"more_tpl": "<div class=\"text-center\"><button class=\"btn btn-blue btn-rounded btn_more\">Загрузить еще</button></div>"
@@ -46,4 +48,8 @@
 'tplFilter.row.default' => '@FILE chunks/tpl_filter_row.tpl',
 'tplFilter.outer.price' => '@FILE chunks/tpl_filter_outer_price.tpl',
 'tplFilter.row.price' => '@FILE chunks/tpl_filter_row_price.tpl'
+'tplFilter.outer.length' => '@FILE chunks/tpl_filter_outer_check.tpl'
+'tplFilter.row.length' => '@FILE chunks/tpl_filter_row_check.tpl'
+'tplFilter.outer.modeproduction' => '@FILE chunks/tpl_filter_outer_check.tpl'
+'tplFilter.row.modeproduction' => '@FILE chunks/tpl_filter_row_check.tpl'
 ])}

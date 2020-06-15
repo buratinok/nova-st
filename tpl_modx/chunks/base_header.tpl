@@ -52,7 +52,7 @@
     <div class="navbar navbar-expand-lg navbar-light navbar-top bg-white d-none d-md-flex">
         <div class="container-fluid container-xl">
             <div class="row row-cols-2 justify-content-sm-center justify-content-md-between align-items-center w-100">
-                <div class="col-10 col-sm-5 col-md-auto brand d-flex align-items-center">
+                <div class="col-10 col-sm-5 col-md-3 col-xl-auto brand d-flex align-items-center">
                     <a class="navbar-brand" href="{$_modx->config.site_url}"><img src="{'+logo_image' | placeholder}" alt="Завод бетонных изделий" title="Завод бетонных изделий"></a>
                     <div class="h6 navbar-top__title m-0">Завод бетонных изделий</div>
                 </div>
@@ -121,9 +121,9 @@
                 "parents" => 0,
                 "level" => 2,
                 'tplOuter' => '@INLINE <ul class="nav nav-pills nav-fill align-items-baseline align-items-md-center">{$wrapper}</ul>',
-                'tpl' => '@INLINE <li class="nav-item px-2 "><a class="nav-link h-100 py-3 px-0" href="{$link}">{$menutitle}<span class="sr-only">
+                'tpl' => '@INLINE <li class="nav-item pr-3 "><a class="nav-link h-100 py-3 px-0" href="{$link}">{$menutitle}<span class="sr-only">
                         ({$menutitle})</span></a></li>',
-                'tplParentRow' => '@INLINE <li class="dropdown nav-item px-2"  aria-labelledby="informationDropdown">
+                'tplParentRow' => '@INLINE <li class="dropdown nav-item pr-3"  aria-labelledby="informationDropdown">
                                      <a class="nav-link dropdown-toggle h-100 py-3 px-0" href="{$link}" id="informationDropdown" role="button" data-toggle="dropdown"
                                  aria-haspopup="true" aria-expanded="false">
                                  {$menutitle}<i class="fas fa-angle-down ml-1"></i> </a> {$wrapper} </li>',

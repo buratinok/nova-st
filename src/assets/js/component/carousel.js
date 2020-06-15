@@ -119,7 +119,10 @@ const $carouselHeader = function () {
         galleryId: 2
     });
     $('#product-thumbnials').lightGallery({
-            thumbnail:true,
+            thumbnail:true,            
+            share: false,
+            download: false,
+            hash: true,
             animateThumb: false,
             showThumbByDefault: false
     });

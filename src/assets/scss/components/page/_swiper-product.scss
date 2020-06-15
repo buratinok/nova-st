@@ -21,7 +21,7 @@
 }
 @include media-breakpoint-down(sm) {
   .control-product {
-    top: 75%;
+    top: 15%;
     left: 48%;
     width: 95%;
     transform: translate(-50%, -50%);
@@ -44,8 +44,8 @@
 }
 @include media-breakpoint-up(sm) {
   .control-product {
-    top: 77.5%;
-    left: 45%;
+    top: 30%;
+    left: 48%;
     width: 90%;
     transform: translate(-50%, -50%);
 
@@ -65,26 +65,4 @@
     }
   }
 }
-/*
-@include media-breakpoint-up(md) {
-  .control-product {
-    top: 80%;
-    left: 80%;
-    transform: translate(-50%, -50%);
 
-    &__next {
-      transform: rotate(180deg);
-    }
-
-    .btn {
-      &:hover {
-        .arrow {
-          svg {
-            pointer-events: fill;
-            fill: white;
-          }
-        }
-      }
-    }
-  }
-}*/

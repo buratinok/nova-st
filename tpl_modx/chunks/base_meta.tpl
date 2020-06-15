@@ -18,9 +18,8 @@
 <title>
     {$_modx->resource.seotitle?: $_modx->resource.pagetitle}
 </title>
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="assets/templates/nova-st/css/swiper.min.css">
 <link rel="stylesheet" href="assets/templates/nova-st/css/lightgallery.min.css">
 <link rel="stylesheet" href="assets/templates/nova-st/css/lg-transitions.min.css">

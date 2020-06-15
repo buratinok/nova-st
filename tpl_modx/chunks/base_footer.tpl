@@ -146,7 +146,7 @@
         </div>
         <div class="row">
             <div class="col py-3 d-md-flex justify-content-between">
-                <p class="mb-1 text-center text-white fonts-size-12">©2005 - {'' | date : 'Y'} р. ООО "НОВА-СТ" </p>
+                <p class="mb-1 text-center text-white fonts-size-12">©2005 - {'' | date : 'Y'} г. ООО "НОВА-СТ" </p>
                 <p class="mb-1 text-center text-white fonts-size-12">{'+text-footer' | placeholder}</p>
              </div>
         </div>
