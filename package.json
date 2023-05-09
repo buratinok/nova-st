@@ -51,7 +51,7 @@
     "bourbon": "^6.0.0",
     "fontawesome": "^5.6.3",
     "glider-js": "^1.7.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-migrate": "^3.1.0",
     "popper": "^1.0.1",
     "slick-carousel-latest": "^1.9.0"
